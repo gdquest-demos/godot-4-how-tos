@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://scapt86edvpp"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gwrl5"]
+height = 1.5
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_0iouv"]
+height = 1.5
+
+[node name="3DPhysics" type="Node3D"]
+
+[node name="PlayerBody" type="CharacterBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PlayerBody"]
+shape = SubResource("CapsuleShape3D_gwrl5")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PlayerBody"]
+mesh = SubResource("CapsuleMesh_0iouv")

@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://dkmi8tx856a8q"]
+
+[ext_resource type="PackedScene" uid="uid://d4eeafgmkyv3m" path="res://3d_physics/3d_physics_floor.glb" id="1_edu32"]
+
+[node name="3d_physics_floor" instance=ExtResource("1_edu32")]
