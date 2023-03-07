@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cshpt6edv1wto"]
+
+[ext_resource type="Script" path="res://await_yield/await_yield_main.gd" id="1_hxh5x"]
+
+[node name="AwaitYield" type="Node"]
+script = ExtResource("1_hxh5x")

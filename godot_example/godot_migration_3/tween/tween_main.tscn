@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://tween/moving_icon/moving_icon.tscn" type="PackedScene" id=1]
+
+[node name="TweenMain" type="Node2D"]
+
+[node name="MovingIcon" parent="." instance=ExtResource( 1 )]
+position = Vector2( 520, 300 )
