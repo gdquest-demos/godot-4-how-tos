@@ -1,4 +1,34 @@
-## Gdscript
+### GDScript Keywords
+
+Some GDScript keywords such as `onready` and `export` became annotations in Godot 4.0. The most significant change is that now they're called with a preceding `@` to indicate an annotation.
+
+The following example shows the difference using `onready` and `export` on Godot 3.x and 4.0:
+
+```
+# Godot 3.0
+extends Node2D
+
+export var velocity := 100.0
+onready var player: Sprite = $Player
+
+
+func _process(delta: float) -> void:
+	var input_direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+	player.position += input_direction * velocity * delta
+```
+
+```
+# Godot 4.0
+extends Node2D
+
+@export var velocity := 100.0
+@onready var player: Sprite2D = $Player
+
+
+func _process(delta: float) -> void:
+	var input_direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+	player.position += input_direction * velocity * delta
+```
 
 ### Physics
 
