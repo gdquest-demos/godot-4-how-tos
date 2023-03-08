@@ -1,3 +1,49 @@
+### GDScript Signals
+
+In Godot 4.0, `signals` were updated with major usability improvements: now they can get referenced as the `signal` built-in types instead of strings, which make human errors like typos much less common, and the code more ergonomic.
+
+The new way to use `signals` is to call their methods `connect()` and `emit()`, which replaces `Node.connect()` and `Node.emit_signal()` respectively. The following example shows the difference between Godot 3.0 and Godot 4.0:
+
+```
+# Godot 3.0
+
+extends Control
+
+signal texture_visibility_changed(visibility)
+
+onready var button: Button = $"%Button"
+onready var texture_rect: TextureRect = $"%TextureRect"
+
+
+func _ready() -> void:
+	button.connect("pressed", self, "_on_button_pressed")
+
+
+func _on_button_pressed() -> void:
+	texture_rect.visible = not texture_rect.visible
+	button.text = "Hide!" if texture_rect.visible else "Show!"
+	emit_signal("texture_visibility_changed", texture_rect.visible)
+```
+
+```
+# Godot 4.0
+
+extends Control
+
+signal texture_visibility_changed
+
+@onready var texture_rect: TextureRect = %TextureRect
+@onready var button: Button = %Button
+
+
+func _ready():
+	button.pressed.connect(func():
+		texture_rect.visible = not texture_rect.visible
+		button.text = "Hide!" if texture_rect.visible else "Show!"
+		texture_visibility_changed.emit(texture_rect.visible)
+	)
+```
+
 ### GDScript Keywords
 
 Some GDScript keywords such as `onready` and `export` became annotations in Godot 4.0. The most significant change is that now they're called with a preceding `@` to indicate an annotation.
