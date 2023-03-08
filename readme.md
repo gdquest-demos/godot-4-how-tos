@@ -1,8 +1,12 @@
-### GDScript Signals
+### GDScript Signals and Callables
 
 In Godot 4.0, `signals` were updated with major usability improvements: now they can get referenced as the `signal` built-in types instead of strings, which make human errors like typos much less common, and the code more ergonomic.
 
-The new way to use `signals` is to call their methods `connect()` and `emit()`, which replaces `Node.connect()` and `Node.emit_signal()` respectively. The following example shows the difference between Godot 3.0 and Godot 4.0:
+The new way to use `signals` is to call their methods `connect()` and `emit()`, which replaces `Node.connect()` and `Node.emit_signal()` respectively.
+
+Godot 4.0 also introduced `Callables`, which are first-class functions in GDScript. This means that function references are mostly not string names anymore, instead they can be directly referenced by name, or local anonymous functions can be created using the `func()` syntax (those are called lambda functions). This ties with the new `signals` usability improvements, making using callbacks much more ergonomic.
+
+The following example shows the difference between using signals in Godot 3.0 and using them Godot 4.0 with a lambda function:
 
 ```
 # Godot 3.0
