@@ -1,17 +1,70 @@
-[gd_scene load_steps=3 format=3 uid="uid://scapt86edvpp"]
+[gd_scene load_steps=12 format=3 uid="uid://scapt86edvpp"]
+
+[ext_resource type="Script" path="res://3d_physics/player_body.gd" id="1_rj15x"]
+[ext_resource type="PackedScene" uid="uid://dkmi8tx856a8q" path="res://3d_physics/3d_physics_floor.tscn" id="2_fr2rq"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_voh06"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_jpi48"]
+sky_material = SubResource("ProceduralSkyMaterial_voh06")
+
+[sub_resource type="Environment" id="Environment_8piny"]
+background_mode = 2
+sky = SubResource("Sky_jpi48")
+tonemap_mode = 2
+glow_enabled = true
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gwrl5"]
 height = 1.5
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ejblu"]
+albedo_color = Color(0.294118, 0.752941, 0.341176, 1)
+
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_0iouv"]
 height = 1.5
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_kvamm"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kcnoo"]
+albedo_color = Color(0.364706, 0.647059, 0.894118, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_7r13k"]
+
 [node name="3DPhysics" type="Node3D"]
 
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_8piny")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+shadow_enabled = true
+
 [node name="PlayerBody" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.183015, 0)
+script = ExtResource("1_rj15x")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="PlayerBody"]
 shape = SubResource("CapsuleShape3D_gwrl5")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="PlayerBody"]
+material_override = SubResource("StandardMaterial3D_ejblu")
 mesh = SubResource("CapsuleMesh_0iouv")
+
+[node name="3d_physics_floor" parent="." instance=ExtResource("2_fr2rq")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.64145, 0.767165, 0, -0.767165, 0.64145, 0, 5.16288, 5.88155)
+
+[node name="RigidBody3D" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.91162, 1.16767, -3.17971)
+collision_layer = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+shape = SubResource("SphereShape3D_kvamm")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D"]
+material_override = SubResource("StandardMaterial3D_kcnoo")
+mesh = SubResource("SphereMesh_7r13k")
