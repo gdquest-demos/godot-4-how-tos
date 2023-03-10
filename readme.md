@@ -1,4 +1,4 @@
-### New Naming Conventions
+### General Naming Conventions
 
 Godot 4.0 changed the naming conventions of some nodes, to make easier to understand what they do or to make the overall API more consistent.
 
@@ -12,6 +12,15 @@ The main naming changes that might affect users are:
 - Names with `ARVR` were replaced with `XR` (the common way of referring to both Augmented Reality and Virtual Reality technologies).
 
 The complete naming convention changes can be check in the [official migration page from Godot documentation](https://docs.godotengine.org/en/stable/tutorials/migrating/upgrading_to_godot_4.html).
+
+### SubViewports
+
+One important change is the difference between Godot 3.0 and Godot 4.0 `Viewports`. In Godot 4.0, `Viewports` are not instantiable; this means they are a class of nodes that are inherited to provide their functionality. The two built-in nodes Godot 4.0 provides that inherit from `Viewport` are:
+
+- `Window`: provides a separate system window to render on.
+- `SubViewport`: provides the same functionality as Godot 3.0 `Viewport` node.
+
+In Godot 3.0, the `SceneTree` root (the first node of the `SceneTree` that all nodes are children to) is a `Viewport`. In Godot 4.0, the root is a `Window`. That's an important differentiation, because `Window` nodes provides specific functionality for system windows.
 
 ### GDScript Signals and Callables
 
