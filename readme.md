@@ -1,3 +1,18 @@
+### New Naming Conventions
+
+Godot 4.0 changed the naming conventions of some nodes, to make easier to understand what they do or to make the overall API more consistent.
+
+The main naming changes that might affect users are:
+
+- Now most `2D` and `3D` nodes with the same functionality have the same names to avoid confusion.
+  - `2D` nodes that have a `3D` node counterpart have `2D` in their name (e.g. `Sprite` became `Sprite2D`).
+  - `3D` nodes that have a `2D` node counterpart have `3D` in their name (e.g. `Spatial` became `Node3D`).
+- `KinematicBody` nodes were replaced with `CharacterBody`.
+- The Visual Shader `Uniform` nodes were replaced with `Parameter` (e.g. `VisualShaderNodeColorUniform` became `VisualShaderNodeColorParameter`).
+- Names with `ARVR` were replaced with `XR` (the common way of referring to both Augmented Reality and Virtual Reality technologies).
+
+The complete naming convention changes can be check in the [official migration page from Godot documentation](https://docs.godotengine.org/en/stable/tutorials/migrating/upgrading_to_godot_4.html).
+
 ### GDScript Signals and Callables
 
 In Godot 4.0, `signals` were updated with major usability improvements: now they can get referenced as the `signal` built-in types instead of strings, which make human errors like typos much less common, and the code more ergonomic.
