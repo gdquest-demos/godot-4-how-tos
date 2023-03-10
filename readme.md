@@ -146,6 +146,8 @@ Another change in Godot 4.0 is the removal of "infinite inertia" on `CharacterBo
 
 An easy way to replicate the "infinite inertia" behavior in Godot 4.0 is to set the nodes in different collision layers. For example, if the Player character is in the `collision_layer` `1`, set the pushable `RigidBody` to be on `collision_mask` `1`, but **not** on `collision_layer` `1`. This will make the `RigidBody` scans for collisions in `collision_layer` `1`, but the Player object will ignore the collision, which will push the object around without affecting the Player.
 
+The last major change is that Godot 4.0 no longer supports Bullet physics (which was the default physics engine in Godot 3.0), instead using its own internalpPhysics engine. This only affects 3D games, but the physics API is the same.
+
 ### Tweens
 
 The tweening system has undergone a major revamp, resulting in the removal of the old Tween node in favor of `SceneTreeTween`. This new API provides increased flexibility for users.
