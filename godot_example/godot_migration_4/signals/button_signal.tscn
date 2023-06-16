@@ -1,16 +1,16 @@
 [gd_scene load_steps=3 format=3 uid="uid://7lwalxtn0uv8"]
 
-[ext_resource type="Script" path="res://signals/signals.gd" id="1_1mkeh"]
-[ext_resource type="Texture2D" uid="uid://ditwcbrk0b0yw" path="res://icon.svg" id="1_jqqjj"]
+[ext_resource type="Script" path="res://signals/button_signal.gd" id="1_d1fdp"]
+[ext_resource type="Texture2D" uid="uid://ditwcbrk0b0yw" path="res://icon.svg" id="2_ieufx"]
 
-[node name="Signals" type="Control"]
+[node name="ButtonSignal" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_1mkeh")
+script = ExtResource("1_d1fdp")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 unique_name_in_owner = true
@@ -26,7 +26,7 @@ offset_right = 64.0
 offset_bottom = 64.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_jqqjj")
+texture = ExtResource("2_ieufx")
 
 [node name="Button" type="Button" parent="."]
 unique_name_in_owner = true
@@ -42,4 +42,5 @@ offset_right = 24.5
 offset_bottom = -65.0
 grow_horizontal = 2
 grow_vertical = 0
-text = "Hide!"
+theme_override_font_sizes/font_size = 40
+text = "Hide"
