@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ce3knynqcic4g"
-path="res://.godot/imported/bat_wing.png-80a382d768a0658c698fc0027b7f0d7f.ctex"
+uid="uid://cai2ijnbypqtr"
+path="res://.godot/imported/slime_hurt_eyes.png-07370f9067087cf86d2cc080ee2cd643.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://shared/2d/characters/bat/parts/bat_wing.png"
-dest_files=["res://.godot/imported/bat_wing.png-80a382d768a0658c698fc0027b7f0d7f.ctex"]
+source_file="res://shared/2d_mechanics/characters/slime/slime_hurt_eyes.png"
+dest_files=["res://.godot/imported/slime_hurt_eyes.png-07370f9067087cf86d2cc080ee2cd643.ctex"]
 
 [params]
 

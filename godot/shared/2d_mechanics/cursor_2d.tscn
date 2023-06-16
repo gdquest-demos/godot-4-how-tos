@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://dfnafy3v2re6k"]
 
-[ext_resource type="Texture2D" uid="uid://bbogreqjs8qmu" path="res://shared/2d/triangle.svg" id="1_tdm3p"]
+[ext_resource type="Texture2D" uid="uid://bbogreqjs8qmu" path="res://shared/2d_mechanics/triangle.svg" id="1_tdm3p"]
 
 [sub_resource type="Animation" id="Animation_waki7"]
 resource_name = "animation"

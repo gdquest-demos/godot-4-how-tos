@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://dr0c3sr0ucg53"]
 
 [ext_resource type="Script" path="res://signals/button_signal.gd" id="1_d1fdp"]
-[ext_resource type="PackedScene" uid="uid://dor8jv8jjdcb" path="res://shared/2d_mechanics/characters/happy_boo/happy_boo.tscn" id="2_2hjt7"]
+[ext_resource type="PackedScene" uid="uid://dor8jv8jjdcb" path="res://shared/2d_mechanics/characters/happy_boo/happy_boo_skin.tscn" id="2_2hjt7"]
 [ext_resource type="Shader" path="res://shared/background/moving_background.gdshader" id="3_m322a"]
 [ext_resource type="Texture2D" uid="uid://7dgd5rrwmmtc" path="res://shared/background/bone_pattern.png" id="4_4w1m1"]
 [ext_resource type="Script" path="res://shared/background/background_ratio.gd" id="5_3per2"]
@@ -24,18 +24,6 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_d1fdp")
 
-[node name="Background" type="CanvasLayer" parent="."]
-layer = -1
-
-[node name="Pattern" type="ColorRect" parent="Background"]
-material = SubResource("ShaderMaterial_r2bcx")
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("5_3per2")
-
 [node name="Character" parent="." instance=ExtResource("2_2hjt7")]
 unique_name_in_owner = true
 position = Vector2(960, 600)
@@ -57,3 +45,15 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/font_size = 56
 text = "Hide"
+
+[node name="Background" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="Pattern" type="ColorRect" parent="Background"]
+material = SubResource("ShaderMaterial_r2bcx")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("5_3per2")

@@ -1,10 +1,10 @@
-[gd_scene load_steps=20 format=3 uid="uid://n4t7nalqg7yp"]
+[gd_scene load_steps=21 format=3 uid="uid://n4t7nalqg7yp"]
 
-[ext_resource type="Texture2D" uid="uid://dvgfmy6vtvjji" path="res://shared/2d/characters/slime/parts/slime_body.png" id="1_3j35h"]
-[ext_resource type="Script" path="res://shared/2d/characters/slime/slime_skin.gd" id="1_kjn1w"]
-[ext_resource type="Texture2D" uid="uid://c078jrp2yvc4s" path="res://shared/2d/characters/slime/parts/slime_face.png" id="2_ygydt"]
-[ext_resource type="Texture2D" uid="uid://cuh5d64bqf4op" path="res://shared/2d/ground_shadow.png" id="2_ywnvv"]
-[ext_resource type="Texture2D" uid="uid://cai2ijnbypqtr" path="res://shared/2d/characters/slime/parts/slime_hurt_eyes.png" id="4_hi70h"]
+[ext_resource type="Texture2D" uid="uid://dvgfmy6vtvjji" path="res://shared/2d_mechanics/characters/slime/slime_body.png" id="1_3j35h"]
+[ext_resource type="Script" path="res://shared/2d_mechanics/characters/character_skin_2d.gd" id="1_5k1pw"]
+[ext_resource type="Texture2D" uid="uid://c078jrp2yvc4s" path="res://shared/2d_mechanics/characters/slime/slime_face.png" id="2_ygydt"]
+[ext_resource type="Texture2D" uid="uid://cuh5d64bqf4op" path="res://shared/2d_mechanics/ground_shadow.png" id="2_ywnvv"]
+[ext_resource type="Texture2D" uid="uid://cai2ijnbypqtr" path="res://shared/2d_mechanics/characters/slime/slime_hurt_eyes.png" id="4_hi70h"]
 
 [sub_resource type="Animation" id="Animation_y4lve"]
 length = 0.001
@@ -266,8 +266,10 @@ nodes/StateMachine/position = Vector2(40, 60)
 nodes/output/position = Vector2(400, 100)
 node_connections = [&"output", 0, &"HurtShot", &"HurtShot", 0, &"StateMachine", &"HurtShot", 1, &"Animation"]
 
+[sub_resource type="AnimationNodeStateMachinePlayback" id="AnimationNodeStateMachinePlayback_3vuqc"]
+
 [node name="SlimeSkin" type="Node2D"]
-script = ExtResource("1_kjn1w")
+script = ExtResource("1_5k1pw")
 
 [node name="GroundShadow" type="Sprite2D" parent="."]
 modulate = Color(0.152941, 0.168627, 0.188235, 0.392157)
@@ -279,11 +281,12 @@ texture = ExtResource("2_ywnvv")
 [node name="Anchor" type="Marker2D" parent="."]
 
 [node name="SlimeBody" type="Sprite2D" parent="Anchor"]
+scale = Vector2(1.00903, 0.990973)
 texture = ExtResource("1_3j35h")
 offset = Vector2(0, -36)
 
 [node name="Face" type="Marker2D" parent="Anchor"]
-position = Vector2(0, -25)
+position = Vector2(0, -27.2779)
 
 [node name="SlimeFace" type="Sprite2D" parent="Anchor/Face"]
 texture = ExtResource("2_ygydt")
@@ -299,5 +302,5 @@ tree_root = SubResource("AnimationNodeBlendTree_b1ecp")
 anim_player = NodePath("../AnimationPlayer")
 active = true
 parameters/HurtShot/active = false
-parameters/HurtShot/internal_active = false
 parameters/HurtShot/request = 0
+parameters/StateMachine/playback = SubResource("AnimationNodeStateMachinePlayback_3vuqc")

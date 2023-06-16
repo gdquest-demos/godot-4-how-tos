@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dv1bkl78vydkc"
-path="res://.godot/imported/ground_shadow.png-e8909b2104cdc74cb827e4a2d6e80bed.ctex"
+uid="uid://dvgfmy6vtvjji"
+path="res://.godot/imported/slime_body.png-6b5840a4c29129ab7d9e90b920842690.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://shared/2d_mechanics/characters/happy_boo/ground_shadow.png"
-dest_files=["res://.godot/imported/ground_shadow.png-e8909b2104cdc74cb827e4a2d6e80bed.ctex"]
+source_file="res://shared/2d_mechanics/characters/slime/slime_body.png"
+dest_files=["res://.godot/imported/slime_body.png-6b5840a4c29129ab7d9e90b920842690.ctex"]
 
 [params]
 
