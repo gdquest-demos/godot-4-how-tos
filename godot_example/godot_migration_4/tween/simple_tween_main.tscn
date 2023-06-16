@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://b7surttsiqco7"]
-
-[ext_resource type="PackedScene" path="res://tween/moving_icon/moving_icon.tscn" id="2_kpb5i"]
-
-[node name="SimpleTween" type="Node2D"]
-
-[node name="MovingIcon" parent="." instance=ExtResource("2_kpb5i")]
-position = Vector2(509, 304)
