@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dc618kgehinxy"]
+
+[ext_resource type="Script" path="res://shared/2d/characters/character_2d.gd" id="1_pqsgr"]
+[ext_resource type="PackedScene" uid="uid://bfds4go2uitlx" path="res://shared/2d/characters/bat/bat_skin.tscn" id="2_ij1fy"]
+
+[node name="Bat" type="Node2D"]
+script = ExtResource("1_pqsgr")
+
+[node name="Skin" parent="." instance=ExtResource("2_ij1fy")]
+unique_name_in_owner = true

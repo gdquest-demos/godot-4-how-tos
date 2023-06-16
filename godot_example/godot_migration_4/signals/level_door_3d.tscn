@@ -1,6 +1,6 @@
-[gd_scene load_steps=8 format=3]
+[gd_scene load_steps=8 format=3 uid="uid://cth1j64ts7st3"]
 
-[ext_resource type="PackedScene" path="res://signals/door_3d_signals.tscn" id="1_sd7ap"]
+[ext_resource type="PackedScene" uid="uid://bfw01evaqhl8n" path="res://signals/door_3d_signals.tscn" id="1_sd7ap"]
 [ext_resource type="PackedScene" uid="uid://dbmmvqahlk64v" path="res://signals/door/fps_character_3d.tscn" id="2_kc6o6"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_i1wfr"]

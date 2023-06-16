@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=3 uid="uid://dfnafy3v2re6k"]
+
+[ext_resource type="Texture2D" uid="uid://bbogreqjs8qmu" path="res://shared/2d/triangle.svg" id="1_tdm3p"]
+
+[sub_resource type="Animation" id="Animation_waki7"]
+resource_name = "animation"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(0.5, 2),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.75, 0.75)]
+}
+
+[sub_resource type="Animation" id="Animation_8d2nn"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_u03re"]
+_data = {
+"RESET": SubResource("Animation_8d2nn"),
+"animation": SubResource("Animation_waki7")
+}
+
+[node name="Cursor2D" type="Sprite2D"]
+modulate = Color(0.870588, 0.313726, 0.168627, 1)
+texture = ExtResource("1_tdm3p")
+offset = Vector2(0, 40)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "animation"
+libraries = {
+"": SubResource("AnimationLibrary_u03re")
+}

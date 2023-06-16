@@ -1,0 +1,56 @@
+[gd_scene load_steps=6 format=3 uid="uid://dab35p7pc04rt"]
+
+[ext_resource type="Script" path="res://async/3_turn_base/async_turn_base.gd" id="1_irsgt"]
+[ext_resource type="PackedScene" uid="uid://dgyyl2bt46bsb" path="res://shared/2d/characters/slime/slime.tscn" id="2_kt4rv"]
+[ext_resource type="PackedScene" uid="uid://dfnafy3v2re6k" path="res://shared/2d/cursor_2d.tscn" id="3_00x6m"]
+[ext_resource type="PackedScene" uid="uid://bc2pta6pd471r" path="res://async/3_turn_base/bat.tscn" id="3_k3rn6"]
+[ext_resource type="PackedScene" uid="uid://dc618kgehinxy" path="res://shared/2d/characters/bat/bat.tscn" id="4_fgl3f"]
+
+[node name="ASyncTurnBase" type="Node2D"]
+script = ExtResource("1_irsgt")
+
+[node name="Characters" type="Node2D" parent="."]
+unique_name_in_owner = true
+
+[node name="Player" parent="Characters" groups=["player"] instance=ExtResource("2_kt4rv")]
+position = Vector2(1244, 564)
+
+[node name="Cursor2D" parent="Characters/Player" instance=ExtResource("3_00x6m")]
+unique_name_in_owner = true
+
+[node name="Bat" parent="Characters" instance=ExtResource("3_k3rn6")]
+position = Vector2(719, 708)
+
+[node name="Bat2" parent="Characters" instance=ExtResource("4_fgl3f")]
+position = Vector2(1115, 386)
+
+[node name="Slime" parent="Characters" instance=ExtResource("2_kt4rv")]
+position = Vector2(1040, 673)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.952941, 0.972549, 0.996078, 1)
+
+[node name="ButtonPlayerTurnDone" type="Button" parent="CanvasLayer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 100)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -150.0
+offset_top = -140.0
+offset_right = 150.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 0
+disabled = true
+text = "Turn Done"

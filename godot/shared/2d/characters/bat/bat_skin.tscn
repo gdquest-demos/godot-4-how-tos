@@ -1,8 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://bfds4go2uitlx"]
+[gd_scene load_steps=15 format=3 uid="uid://bfds4go2uitlx"]
 
-[ext_resource type="Texture2D" uid="uid://cuh5d64bqf4op" path="res://shared/2d_mechanics/ground_shadow.png" id="1_cubiu"]
-[ext_resource type="Texture2D" uid="uid://ce3knynqcic4g" path="res://shared/2d_mechanics/characters/bat/parts/bat_wing.png" id="1_ylg8o"]
-[ext_resource type="Texture2D" uid="uid://7cxk5tx8ok48" path="res://shared/2d_mechanics/characters/bat/parts/bat_head.png" id="2_ivd55"]
+[ext_resource type="Texture2D" uid="uid://cuh5d64bqf4op" path="res://shared/2d/ground_shadow.png" id="1_cubiu"]
+[ext_resource type="Script" path="res://shared/2d/characters/bat/bat_skin.gd" id="1_s8bro"]
+[ext_resource type="Texture2D" uid="uid://ce3knynqcic4g" path="res://shared/2d/characters/bat/parts/bat_wing.png" id="1_ylg8o"]
+[ext_resource type="Texture2D" uid="uid://7cxk5tx8ok48" path="res://shared/2d/characters/bat/parts/bat_head.png" id="2_ivd55"]
 
 [sub_resource type="Animation" id="Animation_84x66"]
 length = 0.001
@@ -142,29 +143,41 @@ _data = {
 "idle": SubResource("Animation_vvyxb")
 }
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_37wlt"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_nai7w"]
 animation = &"hurt"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_jacc3"]
+[sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_fhtdg"]
+filters = ["Anchor/Body:modulate", "Anchor/Body:scale", "Anchor/Face/SlimeFace:texture", "Anchor/Face:position:y", "Anchor/SlimeBody:modulate", "Anchor/SlimeBody:texture", "Anchor:scale"]
+fadein_time = 0.05
+fadeout_time = 0.05
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_fw3iu"]
 animation = &"idle"
 
-[sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_mxv8j"]
-filter_enabled = true
-filters = ["Anchor/Body:modulate", "Anchor/Body:scale"]
-fadein_time = 0.1
-fadeout_time = 0.1
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_nsqbj"]
+advance_mode = 2
 
-[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_avncd"]
-graph_offset = Vector2(-376, 49)
-nodes/Animation/node = SubResource("AnimationNodeAnimation_jacc3")
-nodes/Animation/position = Vector2(-100, 100)
-"nodes/Animation 2/node" = SubResource("AnimationNodeAnimation_37wlt")
-"nodes/Animation 2/position" = Vector2(-100, 220)
-nodes/OneShot/node = SubResource("AnimationNodeOneShot_mxv8j")
-nodes/OneShot/position = Vector2(100, 100)
-node_connections = [&"output", 0, &"OneShot", &"OneShot", 0, &"Animation", &"OneShot", 1, &"Animation 2"]
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_jl0m7"]
+states/End/position = Vector2(537, 103)
+states/Start/position = Vector2(215, 103)
+states/idle/node = SubResource("AnimationNodeAnimation_fw3iu")
+states/idle/position = Vector2(330, 103)
+transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_nsqbj")]
+graph_offset = Vector2(-128, -39)
 
-[node name="Bat" type="Node2D"]
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_2n8fg"]
+graph_offset = Vector2(-305, 48)
+nodes/Animation/node = SubResource("AnimationNodeAnimation_nai7w")
+nodes/Animation/position = Vector2(60, 240)
+nodes/HurtShot/node = SubResource("AnimationNodeOneShot_fhtdg")
+nodes/HurtShot/position = Vector2(220, 120)
+nodes/StateMachine/node = SubResource("AnimationNodeStateMachine_jl0m7")
+nodes/StateMachine/position = Vector2(40, 60)
+nodes/output/position = Vector2(400, 100)
+node_connections = [&"output", 0, &"HurtShot", &"HurtShot", 0, &"StateMachine", &"HurtShot", 1, &"Animation"]
+
+[node name="BatSkin" type="Node2D"]
+script = ExtResource("1_s8bro")
 
 [node name="GroundShadow" type="Sprite2D" parent="."]
 modulate = Color(0.152941, 0.168627, 0.188235, 0.392157)
@@ -200,9 +213,10 @@ libraries = {
 }
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
-tree_root = SubResource("AnimationNodeBlendTree_avncd")
+unique_name_in_owner = true
+tree_root = SubResource("AnimationNodeBlendTree_2n8fg")
 anim_player = NodePath("../AnimationPlayer")
 active = true
-parameters/OneShot/active = false
-parameters/OneShot/internal_active = false
-parameters/OneShot/request = 0
+parameters/HurtShot/active = false
+parameters/HurtShot/internal_active = false
+parameters/HurtShot/request = 0

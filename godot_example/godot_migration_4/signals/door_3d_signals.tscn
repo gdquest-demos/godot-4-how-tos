@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3]
+[gd_scene load_steps=24 format=3 uid="uid://bfw01evaqhl8n"]
 
 [ext_resource type="Script" path="res://signals/door_3d_signals.gd" id="1_rxmyp"]
 [ext_resource type="AudioStream" uid="uid://d3v5grquvdd3n" path="res://signals/door/bathroom_door.mp3" id="2_jtsxb"]

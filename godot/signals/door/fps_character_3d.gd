@@ -25,7 +25,7 @@ func _physics_process(delta):
 	var direction = transform.basis * input_direction_3D
 	direction.y = 0.0
 	direction = direction.normalized()
-	
+
 	velocity.x = direction.x * SPEED
 	velocity.z = direction.z * SPEED
 

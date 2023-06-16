@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://bc2pta6pd471r"]
+
+[ext_resource type="PackedScene" uid="uid://dc618kgehinxy" path="res://shared/2d/characters/bat/bat.tscn" id="1_6ymgj"]
+[ext_resource type="Script" path="res://async/3_turn_base/bat.gd" id="2_bdvja"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_mtbnd"]
+font_size = 24
+font_color = Color(0, 0.478431, 0.764706, 1)
+
+[node name="Bat" instance=ExtResource("1_6ymgj")]
+script = ExtResource("2_bdvja")
+
+[node name="Label" type="Label" parent="." index="1"]
+unique_name_in_owner = true
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -140.0
+offset_right = 20.0
+offset_bottom = -114.0
+grow_horizontal = 2
+grow_vertical = 0
+label_settings = SubResource("LabelSettings_mtbnd")
+horizontal_alignment = 1

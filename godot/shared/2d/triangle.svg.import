@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c078jrp2yvc4s"
-path="res://.godot/imported/slime_face.png-9b71bc3487edef7f6271c83e0c0ce34c.ctex"
+uid="uid://bbogreqjs8qmu"
+path="res://.godot/imported/triangle.svg-7c5963a0f86ca4c4ee04149e2fc8c915.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://shared/2d_mechanics/characters/slime/parts/slime_face.png"
-dest_files=["res://.godot/imported/slime_face.png-9b71bc3487edef7f6271c83e0c0ce34c.ctex"]
+source_file="res://shared/2d/triangle.svg"
+dest_files=["res://.godot/imported/triangle.svg-7c5963a0f86ca4c4ee04149e2fc8c915.ctex"]
 
 [params]
 
@@ -32,3 +32,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false
