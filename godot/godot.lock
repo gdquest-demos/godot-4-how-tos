@@ -1,0 +1,17 @@
+[
+  {
+    "name": "gdquest.colorpicker_presets",
+    "tarball": "https://registry.npmjs.org/gdquest.colorpicker_presets/-/gdquest.colorpicker_presets-0.0.2-beta.tgz",
+    "version": "0.0.2-beta"
+  },
+  {
+    "name": "gdquest.prototype_material",
+    "tarball": "https://registry.npmjs.org/gdquest.prototype_material/-/gdquest.prototype_material-0.0.3-alpha.tgz",
+    "version": "0.0.3-alpha"
+  },
+  {
+    "name": "gdquest.sparkly_bag",
+    "tarball": "https://registry.npmjs.org/gdquest.sparkly_bag/-/gdquest.sparkly_bag-0.0.1-alpha.4.tgz",
+    "version": "0.0.1-alpha.4"
+  }
+]
