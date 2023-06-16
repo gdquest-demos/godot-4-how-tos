@@ -40,7 +40,7 @@ mesh = SubResource("BoxMesh_bmo5b")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
 shape = SubResource("BoxShape3D_nhwvx")
 
-[node name="Area3D" parent="." instance=ExtResource("1_sd7ap")]
+[node name="Door3D" parent="." instance=ExtResource("1_sd7ap")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("2_kc6o6")]
