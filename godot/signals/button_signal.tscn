@@ -1,7 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://7lwalxtn0uv8"]
+[gd_scene load_steps=7 format=3 uid="uid://dr0c3sr0ucg53"]
 
 [ext_resource type="Script" path="res://signals/button_signal.gd" id="1_d1fdp"]
-[ext_resource type="Texture2D" uid="uid://b2cafm62k5c2c" path="res://icon.svg" id="2_ieufx"]
+[ext_resource type="PackedScene" uid="uid://dor8jv8jjdcb" path="res://shared/2d_mechanics/characters/happy_boo/happy_boo.tscn" id="2_2hjt7"]
+[ext_resource type="Shader" path="res://shared/background/moving_background.gdshader" id="3_m322a"]
+[ext_resource type="Texture2D" uid="uid://7dgd5rrwmmtc" path="res://shared/background/bone_pattern.png" id="4_4w1m1"]
+[ext_resource type="Script" path="res://shared/background/background_ratio.gd" id="5_3per2"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_r2bcx"]
+shader = ExtResource("3_m322a")
+shader_parameter/bg_color = Color(0.0235294, 0.113725, 0.329412, 1)
+shader_parameter/pattern_color = Color(0, 0.478431, 0.764706, 1)
+shader_parameter/scale = 4.0
+shader_parameter/ratio = 0.56
+shader_parameter/direction = Vector2(0, 0)
+shader_parameter/pattern_sampler = ExtResource("4_4w1m1")
 
 [node name="ButtonSignal" type="Control"]
 layout_mode = 3
@@ -12,21 +24,22 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_d1fdp")
 
-[node name="TextureRect" type="TextureRect" parent="."]
-unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -64.0
-offset_top = -64.0
-offset_right = 64.0
-offset_bottom = 64.0
+[node name="Background" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="Pattern" type="ColorRect" parent="Background"]
+material = SubResource("ShaderMaterial_r2bcx")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_ieufx")
+script = ExtResource("5_3per2")
+
+[node name="Character" parent="." instance=ExtResource("2_2hjt7")]
+unique_name_in_owner = true
+position = Vector2(960, 600)
+scale = Vector2(1.5, 1.5)
 
 [node name="Button" type="Button" parent="."]
 unique_name_in_owner = true
@@ -36,11 +49,11 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -24.5
-offset_top = -96.0
-offset_right = 24.5
-offset_bottom = -65.0
+offset_left = -120.0
+offset_top = -409.0
+offset_right = 120.0
+offset_bottom = -310.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_font_sizes/font_size = 40
+theme_override_font_sizes/font_size = 56
 text = "Hide"
