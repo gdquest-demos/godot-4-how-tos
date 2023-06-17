@@ -1,0 +1,55 @@
+[gd_scene load_steps=7 format=3 uid="uid://dstto12nlydi2"]
+
+[ext_resource type="PackedScene" uid="uid://dnh2occ7mhnl1" path="res://shared/background/background.tscn" id="1_exee4"]
+[ext_resource type="Script" path="res://async/1_intro/async_intro.gd" id="1_tx0wa"]
+[ext_resource type="Shader" path="res://shared/background/moving_background.gdshader" id="2_748s8"]
+[ext_resource type="PackedScene" uid="uid://n4t7nalqg7yp" path="res://shared/2d_mechanics/characters/slime/slime_skin.tscn" id="2_qenny"]
+[ext_resource type="Texture2D" uid="uid://cm2lfxtg5mg1w" path="res://shared/background/async_pattern.svg" id="3_lk34r"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lp8p7"]
+shader = ExtResource("2_748s8")
+shader_parameter/bg_color = Color(0.45098, 0.152941, 0.360784, 1)
+shader_parameter/pattern_color = Color(1, 0.254902, 0.490196, 1)
+shader_parameter/scale = 4.0
+shader_parameter/ratio = 0.56
+shader_parameter/direction = Vector2(0.025, 0)
+shader_parameter/pattern_sampler = ExtResource("3_lk34r")
+
+[node name="ASyncIntro" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tx0wa")
+
+[node name="SlimeSkin" parent="." instance=ExtResource("2_qenny")]
+unique_name_in_owner = true
+position = Vector2(963, 542)
+
+[node name="ButtonHurt" type="Button" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -133.0
+offset_top = -345.0
+offset_right = 133.0
+offset_bottom = -260.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 56
+text = "Press Me!"
+
+[node name="Background" parent="." instance=ExtResource("1_exee4")]
+
+[node name="Pattern" parent="Background" index="0"]
+material = SubResource("ShaderMaterial_lp8p7")
+
+[connection signal="pressed" from="ButtonHurt" to="." method="_on_button_hurt_pressed"]
+
+[editable path="Background"]

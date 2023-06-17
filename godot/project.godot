@@ -17,7 +17,6 @@ config/icon="res://icon.svg"
 [autoload]
 
 ResetNetInjector="*res://addons/gdquest.sparkly_bag/autoloads/reset_net_injector.gd"
-BackgroundInjector="*res://addons/gdquest.sparkly_bag/autoloads/background_injector/background_injector.gd"
 
 [display]
 

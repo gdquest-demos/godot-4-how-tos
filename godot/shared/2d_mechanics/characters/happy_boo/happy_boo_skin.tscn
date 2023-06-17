@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://dor8jv8jjdcb"]
+[gd_scene load_steps=26 format=3 uid="uid://dor8jv8jjdcb"]
 
 [ext_resource type="Script" path="res://shared/2d_mechanics/characters/character_skin_2d.gd" id="1_jr365"]
 [ext_resource type="Texture2D" uid="uid://cuh5d64bqf4op" path="res://shared/2d_mechanics/ground_shadow.png" id="2_i8e11"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dhapxq8y8ow57" path="res://shared/2d_mechanics/characters/happy_boo/square_lower_leg.png" id="4_t7lsq"]
 [ext_resource type="Texture2D" uid="uid://qmqpm6asge1i" path="res://shared/2d_mechanics/characters/happy_boo/square_upper_leg.png" id="5_ij624"]
 [ext_resource type="Texture2D" uid="uid://cksiu5gst6fmp" path="res://shared/2d_mechanics/characters/happy_boo/square_body.png" id="6_am3wu"]
+[ext_resource type="Texture2D" uid="uid://buq1vfp5div3a" path="res://shared/2d_mechanics/characters/happy_boo/square_hurt_eyes.png" id="7_njlni"]
 [ext_resource type="Texture2D" uid="uid://cvs0lh814pk7h" path="res://shared/2d_mechanics/characters/happy_boo/square_face.png" id="7_nma1n"]
 [ext_resource type="SkeletonModificationStack2D" uid="uid://dtf0pmja4mcaa" path="res://shared/2d_mechanics/characters/happy_boo/square_modification_stack.tres" id="8_eox6w"]
 
@@ -131,6 +132,30 @@ tracks/9/keys = {
 "update": 0,
 "values": [Color(1, 0.572549, 0.176471, 1)]
 }
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Remote/SquareBody/SquareFace:texture")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("7_nma1n")]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Remote/SquareBody/SquareFace:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -17)]
+}
 
 [sub_resource type="Animation" id="Animation_exlfc"]
 resource_name = "hurt"
@@ -158,6 +183,30 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(-2, -2, -2),
 "update": 0,
 "values": [Color(1, 0.572549, 0.176471, 1), Color(1, 0, 0, 1), Color(1, 0.572549, 0.176471, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Remote/SquareBody/SquareFace:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("7_njlni"), ExtResource("7_nma1n")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Remote/SquareBody/SquareFace:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -17), Vector2(0, -27)]
 }
 
 [sub_resource type="Animation" id="Animation_sablf"]
@@ -365,6 +414,8 @@ filters = ["Anchor/Body:modulate", "Anchor/Body:scale", "Anchor/Face/SlimeFace:t
 fadein_time = 0.05
 fadeout_time = 0.05
 
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_tx2jv"]
+
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_56v46"]
 animation = &"idle"
 
@@ -389,15 +440,17 @@ transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition
 graph_offset = Vector2(-128, -39)
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_1dhgo"]
-graph_offset = Vector2(-155, 0)
+graph_offset = Vector2(-317, 52)
 nodes/Animation/node = SubResource("AnimationNodeAnimation_kqmes")
-nodes/Animation/position = Vector2(60, 240)
+nodes/Animation/position = Vector2(-100, 240)
 nodes/HurtShot/node = SubResource("AnimationNodeOneShot_dhxkq")
 nodes/HurtShot/position = Vector2(220, 120)
+nodes/HurtTimeScale/node = SubResource("AnimationNodeTimeScale_tx2jv")
+nodes/HurtTimeScale/position = Vector2(40, 240)
 nodes/StateMachine/node = SubResource("AnimationNodeStateMachine_swdv2")
-nodes/StateMachine/position = Vector2(40, 60)
+nodes/StateMachine/position = Vector2(-120, 100)
 nodes/output/position = Vector2(400, 100)
-node_connections = [&"output", 0, &"HurtShot", &"HurtShot", 0, &"StateMachine", &"HurtShot", 1, &"Animation"]
+node_connections = [&"output", 0, &"HurtShot", &"HurtShot", 0, &"StateMachine", &"HurtShot", 1, &"HurtTimeScale", &"HurtTimeScale", 0, &"Animation"]
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id="AnimationNodeStateMachinePlayback_bg6qo"]
 
@@ -415,51 +468,51 @@ texture = ExtResource("2_i8e11")
 modulate = Color(1, 0.572549, 0.176471, 1)
 
 [node name="SquareFootL" type="Sprite2D" parent="Remote"]
-position = Vector2(-14.0692, -3.00757)
+position = Vector2(-22.8281, -3.03689)
 rotation = -0.436332
-scale = Vector2(0.999667, 0.999667)
+scale = Vector2(0.999705, 0.999705)
 texture = ExtResource("3_a7vmk")
 offset = Vector2(-4, 0)
 
 [node name="SquareLowerLegL" type="Sprite2D" parent="Remote"]
-position = Vector2(-14.8931, -14.9752)
-rotation = -0.0687305
-scale = Vector2(0.999667, 0.999667)
+position = Vector2(-17.7017, -13.8829)
+rotation = 0.441534
+scale = Vector2(0.999705, 0.999705)
 texture = ExtResource("4_t7lsq")
 offset = Vector2(0, 6)
 
 [node name="SquareUpperLegL" type="Sprite2D" parent="Remote"]
-position = Vector2(-8.69804, -27.5254)
-rotation = 0.458532
-scale = Vector2(0.999703, 0.999703)
+position = Vector2(-11.7209, -26.5365)
+rotation = 0.441534
+scale = Vector2(0.999705, 0.999705)
 texture = ExtResource("5_ij624")
 offset = Vector2(0, 6)
 
 [node name="SquareFootR" type="Sprite2D" parent="Remote"]
-position = Vector2(13.9308, -2.97207)
+position = Vector2(21.4101, -3.32614)
 rotation = -2.70526
-scale = Vector2(0.999669, 0.999669)
+scale = Vector2(0.999708, 0.999708)
 texture = ExtResource("3_a7vmk")
 offset = Vector2(-4, 0)
 
 [node name="SquareLowerLegR" type="Sprite2D" parent="Remote"]
-position = Vector2(18.1412, -14.2049)
-rotation = 0.358622
-scale = Vector2(0.999669, 0.999669)
+position = Vector2(15.3409, -13.6741)
+rotation = -0.530441
+scale = Vector2(0.999708, 0.999708)
 texture = ExtResource("4_t7lsq")
 offset = Vector2(0, 6)
 
 [node name="SquareUpperLegR" type="Sprite2D" parent="Remote"]
-position = Vector2(11.2667, -26.3962)
-rotation = -0.513443
-scale = Vector2(0.999706, 0.999706)
+position = Vector2(8.26021, -25.7468)
+rotation = -0.530441
+scale = Vector2(0.999708, 0.999708)
 texture = ExtResource("5_ij624")
 offset = Vector2(0, 6)
 
 [node name="SquareBody" type="Sprite2D" parent="Remote"]
-position = Vector2(1.73601, -34.9467)
-rotation = 0.0564999
-scale = Vector2(0.999833, 0.999833)
+position = Vector2(-1.41447, -34.1341)
+rotation = 0.0395019
+scale = Vector2(0.999835, 0.999835)
 texture = ExtResource("6_am3wu")
 offset = Vector2(0, -23)
 
@@ -471,9 +524,9 @@ texture = ExtResource("7_nma1n")
 modification_stack = ExtResource("8_eox6w")
 
 [node name="Center" type="Bone2D" parent="Skeleton2D"]
-position = Vector2(1.73601, -34.9467)
-rotation = 0.0564999
-scale = Vector2(0.999833, 0.999833)
+position = Vector2(-1.41447, -34.1341)
+rotation = 0.0395019
+scale = Vector2(0.999835, 0.999835)
 rest = Transform2D(1, 0, 0, 1, 0, -37)
 
 [node name="UpperLegL" type="Bone2D" parent="Skeleton2D/Center"]
@@ -481,12 +534,10 @@ position = Vector2(-10, 8)
 rotation = 0.402032
 scale = Vector2(0.99987, 0.99987)
 rest = Transform2D(1, 0, 0, 1, -14, 8)
-metadata/_local_pose_override_enabled_ = true
 
 [node name="LowerLegL" type="Bone2D" parent="Skeleton2D/Center/UpperLegL"]
 position = Vector2(0, 14)
 rest = Transform2D(1, 0, 0, 1, 0, 14)
-metadata/_local_pose_override_enabled_ = true
 
 [node name="FootL" type="Bone2D" parent="Skeleton2D/Center/UpperLegL/LowerLegL"]
 position = Vector2(0, 12)
@@ -511,12 +562,10 @@ position = Vector2(10, 8)
 rotation = -0.569943
 scale = Vector2(0.999873, 0.999873)
 rest = Transform2D(1, 0, 0, 1, 14, 8)
-metadata/_local_pose_override_enabled_ = true
 
 [node name="LowerLegR" type="Bone2D" parent="Skeleton2D/Center/UpperLegR"]
 position = Vector2(0, 14)
 rest = Transform2D(1, 0, 0, 1, 0, 14)
-metadata/_local_pose_override_enabled_ = true
 
 [node name="FootR" type="Bone2D" parent="Skeleton2D/Center/UpperLegR/LowerLegR"]
 position = Vector2(0, 12)
@@ -571,7 +620,6 @@ update_position = false
 update_scale = false
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-unique_name_in_owner = true
 libraries = {
 "": SubResource("AnimationLibrary_wrcpu")
 }
@@ -583,4 +631,5 @@ anim_player = NodePath("../AnimationPlayer")
 active = true
 parameters/HurtShot/active = false
 parameters/HurtShot/request = 0
+parameters/HurtTimeScale/scale = 1.0
 parameters/StateMachine/playback = SubResource("AnimationNodeStateMachinePlayback_bg6qo")
