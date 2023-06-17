@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="256px"
+   height="256px"
+   viewBox="0 0 256 256"
+   id="SVGRoot"
+   version="1.1"
+   enable-background="new"
+   inkscape:version="1.3-alpha (2a5ddc9, 2023-03-29)"
+   sodipodi:docname="ellipses_pattern.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs4787">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="patternClipPath">
+      <rect
+         y="0"
+         x="0"
+         height="256"
+         width="256"
+         id="clipPathRect"
+         style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:#ffff00;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:20;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:1.09889996;stroke-opacity:1;marker:none;enable-background:accumulate" />
+    </clipPath>
+    <marker
+       inkscape:stockid="Arrow2Mend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow2Mend"
+       style="overflow:visible;"
+       inkscape:isstock="true">
+      <path
+         id="path19572"
+         style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round;stroke:#000000;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         transform="scale(0.6) rotate(180) translate(0,0)" />
+    </marker>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter4137"
+       x="-0.24439024"
+       y="-0.24439024"
+       width="1.4887805"
+       height="1.4887805">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="6.727443"
+         id="feGaussianBlur4139" />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.78125"
+     inkscape:cx="422.4"
+     inkscape:cy="10.88"
+     inkscape:document-units="px"
+     inkscape:current-layer="designTop"
+     showgrid="false"
+     inkscape:pagecheckerboard="true"
+     inkscape:window-width="1920"
+     inkscape:window-height="1043"
+     inkscape:window-x="1920"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:blackoutopacity="0.0"
+     showborder="true"
+     inkscape:showpageshadow="true"
+     borderlayer="false"
+     inkscape:deskcolor="#d1d1d1" />
+  <g
+     inkscape:groupmode="layer"
+     id="patternLayer"
+     inkscape:label="Pattern"
+     style="display:inline">
+    <g
+       id="g8891"
+       sodipodi:insensitive="true">
+      <use
+         x="0"
+         y="0"
+         xlink:href="#fullPattern"
+         id="fullPatternClone"
+         transform="translate(512, -256)"
+         width="256"
+         height="256"
+         inkscape:tile-cx="128.0"
+         inkscape:tile-cy="128.0"
+         inkscape:tile-w="256"
+         inkscape:tile-h="256"
+         inkscape:tile-x0="256"
+         inkscape:tile-y0="256" />
+      <use
+         height="100%"
+         width="100%"
+         x="0"
+         y="0"
+         inkscape:tiled-clone-of="#fullPatternClone"
+         xlink:href="#fullPatternClone"
+         transform="translate(0, 256)"
+         id="clonePreview1" />
+      <use
+         height="100%"
+         width="100%"
+         x="0"
+         y="0"
+         inkscape:tiled-clone-of="#fullPatternClone"
+         xlink:href="#fullPatternClone"
+         transform="translate(0, 512)"
+         id="clonePreview2" />
+      <use
+         height="100%"
+         width="100%"
+         x="0"
+         y="0"
+         inkscape:tiled-clone-of="#fullPatternClone"
+         xlink:href="#fullPatternClone"
+         transform="translate(256, 0)"
+         id="clonePreview3" />
+      <use
+         height="100%"
+         width="100%"
+         x="0"
+         y="0"
+         inkscape:tiled-clone-of="#fullPatternClone"
+         xlink:href="#fullPatternClone"
+         transform="translate(256, 256)"
+         id="clonePreview4" />
+      <use
+         height="100%"
+         width="100%"
+         x="0"
+         y="0"
+         inkscape:tiled-clone-of="#fullPatternClone"
+         xlink:href="#fullPatternClone"
+         transform="translate(256, 512)"
+         id="clonePreview5" />
+      <use
+         height="100%"
+         width="100%"
+         x="0"
+         y="0"
+         inkscape:tiled-clone-of="#fullPatternClone"
+         xlink:href="#fullPatternClone"
+         transform="translate(512, 0)"
+         id="clonePreview6" />
+      <use
+         height="100%"
+         width="100%"
+         x="0"
+         y="0"
+         inkscape:tiled-clone-of="#fullPatternClone"
+         xlink:href="#fullPatternClone"
+         transform="translate(512, 256)"
+         id="clonePreview7" />
+      <use
+         height="100%"
+         width="100%"
+         x="0"
+         y="0"
+         inkscape:tiled-clone-of="#fullPatternClone"
+         xlink:href="#fullPatternClone"
+         transform="translate(512, 512)"
+         id="clonePreview8" />
+    </g>
+    <use
+       style="opacity:0.3"
+       height="100%"
+       width="100%"
+       id="phantomBottom"
+       xlink:href="#designBottom"
+       y="0"
+       x="0"
+       sodipodi:insensitive="true" />
+    <use
+       style="opacity:0.3"
+       height="100%"
+       width="100%"
+       id="phantomTop"
+       xlink:href="#designTop"
+       y="0"
+       x="0"
+       sodipodi:insensitive="true" />
+    <g
+       id="infoGroup"
+       sodipodi:insensitive="true"
+       transform="scale(2.56, 2.56)">
+      <rect
+         style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:76.99082184;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+         id="rect4130"
+         width="526.66248"
+         height="360.00635"
+         x="-348.83969"
+         y="-380.86212" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:sans-serif;-inkscape-font-specification:Verdana;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+         x="-326.82172"
+         y="-349.80621"
+         id="text8664"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:23.6686px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold'"
+           sodipodi:role="line"
+           id="tspan8666"
+           x="-326.82172"
+           y="-349.80621">Seamless pattern</tspan></text>
+      <flowRoot
+         xml:space="preserve"
+         id="infoText"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:sans-serif;-inkscape-font-specification:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+         transform="translate(-709.3014,-231.7039)"><flowRegion
+           id="flowRegion11597"><rect
+             ry="0.97061312"
+             id="rect11599"
+             width="491.7114"
+             height="324.99371"
+             x="383.75671"
+             y="-110.4523"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.75px;font-family:sans-serif;-inkscape-font-specification:sans-serif" /></flowRegion><flowPara
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:1.25;font-family:Cantarell;-inkscape-font-specification:Cantarell"
+           id="flowPara6756">Use the layers &quot;<flowSpan
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Cantarell;-inkscape-font-specification:'Cantarell Bold'"
+   id="flowSpan7476">Pattern Foreground</flowSpan>&quot; and &quot;<flowSpan
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Cantarell;-inkscape-font-specification:'Cantarell Bold'"
+   id="flowSpan7478">Pattern Background</flowSpan>&quot; on the pattern page to create your design. The separation into two layers will make it easier for you to create and edit overlapping content like a foreground drawing with a background fill.</flowPara><flowPara
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:1.25;font-family:Cantarell;-inkscape-font-specification:Cantarell"
+           id="flowPara7456"> </flowPara><flowPara
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:1.25;font-family:Cantarell;-inkscape-font-specification:Cantarell"
+           id="flowPara7458">The layer named &quot;<flowSpan
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Cantarell;-inkscape-font-specification:'Cantarell Bold'"
+   id="flowSpan7480">Pattern</flowSpan>&quot; is for using the seamless pattern, copying it to other documents, adding opacity etc. </flowPara><flowPara
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:1.25;font-family:Cantarell;-inkscape-font-specification:Cantarell"
+           id="flowPara7460">Select the group on the page, and use <flowSpan
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Cantarell;-inkscape-font-specification:'Cantarell Bold'"
+   id="flowSpan7484">Object-&gt;Pattern-&gt;Objects to Pattern</flowSpan> to convert your creation into a fill pattern.</flowPara><flowPara
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:1.25;font-family:Cantarell;-inkscape-font-specification:Cantarell"
+           id="flowPara7462"> </flowPara><flowPara
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:1.25;font-family:Cantarell;-inkscape-font-specification:Cantarell"
+           id="flowPara7464">The layer &quot;<flowSpan
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Cantarell;-inkscape-font-specification:'Cantarell Bold'"
+   id="flowSpan7482">Preview Background</flowSpan>&quot; provides an easy way to preview your creation if it contains transparency.</flowPara><flowPara
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:1.25;font-family:Cantarell;-inkscape-font-specification:Cantarell"
+           id="flowPara7466">Changing this layer's visibility will not alter the pattern.</flowPara><flowPara
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:1.25;font-family:Cantarell;-inkscape-font-specification:Cantarell"
+           id="flowPara7468"> </flowPara><flowPara
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:1.25;font-family:Cantarell;-inkscape-font-specification:Cantarell"
+           id="flowPara7470">If an object is moved outside the pattern/page limits, it will be difficult to select it. </flowPara><flowPara
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:1.25;font-family:Cantarell;-inkscape-font-specification:Cantarell"
+           id="flowPara7472">To move it back onto the page, select the object using the rubberband selection (click and drag a selection box) with the selection tool.</flowPara><flowPara
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:1.25;font-family:Cantarell;-inkscape-font-specification:Cantarell"
+           id="flowPara7474">Then move it back onto the page, using the arrow keys or the &quot;Align and Distribute&quot; dialog (Shift+Ctrl+A).</flowPara></flowRoot>
+      <path
+         sodipodi:nodetypes="cccc"
+         inkscape:connector-curvature="0"
+         id="path19539"
+         d="m -354.4906,-359.49 h -6.1704 V 51.51566 h 229.6052"
+         style="color:#000000;text-decoration:none;text-decoration-line:none;display:inline;overflow:visible;visibility:visible;fill:none;stroke:#000000;stroke-width:3.77952766;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-end:url(#Arrow2Mend);enable-background:accumulate" />
+    </g>
+    <g
+       id="textPreview"
+       sodipodi:insensitive="true"
+       transform="matrix(2.56 0 0 2.56 1310.72 0)">
+      <path
+         d="m -29.56541,100 v -7.16704 h 2.00731 v 4.51126 h 1.91761 v -4.24223 h 2.00731 v 4.24223 h 4.36647 V 100 Z"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:medium;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         id="path9845"
+         inkscape:connector-curvature="0" />
+      <path
+         d="m -22.7433,87.81814 q 0,0.77256 0.26214,1.16575 0.26214,0.38628 0.77256,0.38628 0.46906,0 0.73808,-0.3104 0.26214,-0.31731 0.26214,-0.87604 0,-0.6967 -0.49667,-1.17266 -0.50355,-0.47596 -1.25547,-0.47596 h -0.28278 z m -0.93124,-3.7732 h 4.40783 v 2.49017 h -1.14504 q 0.70359,0.49666 1.02773,1.11747 0.31735,0.62082 0.31735,1.51066 0,1.20024 -0.69671,1.95213 -0.70359,0.74498 -1.82103,0.74498 -1.35893,0 -1.99355,-0.93123 -0.63462,-0.93812 -0.63462,-2.93854 v -1.45547 h -0.19316 q -0.58628,0 -0.8553,0.46216 -0.2759,0.46217 -0.2759,1.44168 0,0.79327 0.15859,1.47617 0.15868,0.6829 0.47603,1.26923 h -1.88321 q -0.19317,-0.79327 -0.28966,-1.59344 -0.10355,-0.80016 -0.10355,-1.60033 0,-2.09008 0.82778,-3.01441 0.8209,-0.93123 2.67642,-0.93123 z"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:medium;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         id="path9847"
+         inkscape:connector-curvature="0" />
+      <path
+         d="m -26.75105,75.72598 h 1.87625 q -0.33111,0.79327 -0.49658,1.53136 -0.16556,0.73808 -0.16556,1.39338 0,0.7036 0.17932,1.04849 0.17243,0.338 0.53803,0.338 0.29663,0 0.45531,-0.25522 0.15858,-0.26212 0.23453,-0.93122 l 0.0624,-0.43458 q 0.2415,-1.89694 0.79329,-2.55225 0.55189,-0.65531 1.73142,-0.65531 1.23474,0 1.85551,0.91054 0.62086,0.91053 0.62086,2.7178 0,0.76568 -0.12419,1.58654 -0.11722,0.81396 -0.35872,1.67621 h -1.87624 q 0.35872,-0.73809 0.53803,-1.51067 0.17941,-0.77947 0.17941,-1.57963 0,-0.72429 -0.20005,-1.08988 -0.20004,-0.3656 -0.59325,-0.3656 -0.33111,0 -0.4897,0.25524 -0.16555,0.24832 -0.25525,1.00019 l -0.055,0.43458 q -0.20692,1.64862 -0.76568,2.31082 -0.55868,0.66221 -1.69684,0.66221 -1.22787,0 -1.82112,-0.84156 -0.59325,-0.84155 -0.59325,-2.57984 0,-0.6829 0.10355,-1.43477 0.10346,-0.75188 0.32415,-1.63483 z"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:medium;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         id="path9849"
+         inkscape:connector-curvature="0" />
+      <path
+         d="m -29.18596,70.67666 h 2.19351 v -2.54535 h 1.7659 v 2.54535 h 3.27654 q 0.53804,0 0.7312,-0.21383 0.1862,-0.21384 0.1862,-0.84846 v -1.26922 h 1.7659 v 2.11768 q 0,1.46237 -0.60701,2.07628 -0.61398,0.60703 -2.07629,0.60703 h -3.27654 v 1.22784 h -1.7659 v -1.22784 h -2.19351 z"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:medium;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         id="path9851"
+         inkscape:connector-curvature="0" />
+      <path
+         d="m -20.38415,59.23292 h 4.05599 v 2.46948 h -10.66429 v -2.46948 h 1.13128 q -0.67598,-0.51044 -0.99334,-1.13127 -0.32423,-0.62081 -0.32423,-1.42788 0,-1.42787 1.13826,-2.3453 1.13119,-0.91744 2.91782,-0.91744 1.78654,0 2.92471,0.91744 1.13128,0.91743 1.13128,2.3453 0,0.80707 -0.31735,1.42788 -0.32414,0.62083 -1.00013,1.13127 z m -5.00108,-1.64171 q 0,0.79327 0.58637,1.22093 0.5794,0.42078 1.6762,0.42078 1.09671,0 1.68308,-0.42078 0.5794,-0.42766 0.5794,-1.22093 0,-0.79327 -0.5794,-1.20715 -0.5794,-0.42078 -1.68308,-0.42078 -1.10368,0 -1.68317,0.42078 -0.5794,0.41388 -0.5794,1.20715 z"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:medium;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         id="path9853"
+         inkscape:connector-curvature="0" />
+      <path
+         d="m -24.88856,45.83706 q -0.1518,0.3242 -0.22077,0.6484 -0.0761,0.31731 -0.0761,0.64151 0,0.95193 0.61389,1.46927 0.6071,0.51045 1.74526,0.51045 h 3.55932 v 2.46948 h -7.72574 v -2.46948 h 1.26923 q -0.7588,-0.47595 -1.10367,-1.08988 -0.35185,-0.62081 -0.35185,-1.48306 0,-0.12416 0.0138,-0.26902 0.009,-0.14486 0.0413,-0.42078 l 2.23496,-0.007 z"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:medium;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         id="path9855"
+         inkscape:connector-curvature="0" />
+      <path
+         d="m -23.15027,36.88348 h 0.7036 v 5.77361 q 0.86914,-0.0897 1.30372,-0.62772 0.43457,-0.53804 0.43457,-1.50375 0,-0.77948 -0.22765,-1.59344 -0.23453,-0.82086 -0.70359,-1.6831 h 1.90385 q 0.33111,0.87604 0.49667,1.75208 0.17243,0.87604 0.17243,1.75209 0,2.09698 -1.06231,3.26274 -1.06919,1.15886 -2.99368,1.15886 -1.89009,0 -2.97304,-1.13817 -1.08304,-1.14506 -1.08304,-3.14547 0,-1.82107 1.0968,-2.91095 1.0968,-1.09678 2.93167,-1.09678 z m -0.8209,2.53846 q -0.70359,0 -1.13119,0.41388 -0.43458,0.40698 -0.43458,1.06918 0,0.71739 0.40697,1.16576 0.40009,0.44836 1.1588,0.55873 z"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:medium;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         id="path9857"
+         inkscape:connector-curvature="0" />
+      <path
+         d="m -26.99245,35.99364 v -2.46947 l 5.33907,-1.92454 -5.33907,-1.91764 v -2.47637 l 7.72574,3.04201 v 2.7109 z"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:medium;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         id="path9859"
+         inkscape:connector-curvature="0" />
+      <path
+         d="m -26.99245,25.80534 v -2.46948 h 7.72574 v 2.46948 z m -3.00753,0 v -2.46948 h 2.01419 v 2.46948 z"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:medium;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         id="path9861"
+         inkscape:connector-curvature="0" />
+      <path
+         d="m -23.15027,13.23722 h 0.7036 v 5.77361 q 0.86914,-0.0897 1.30372,-0.62772 0.43457,-0.53805 0.43457,-1.50376 0,-0.77947 -0.22765,-1.59344 -0.23453,-0.82085 -0.70359,-1.6831 h 1.90385 q 0.33111,0.87604 0.49667,1.75208 0.17243,0.87605 0.17243,1.75209 0,2.09698 -1.06231,3.26275 -1.06919,1.15885 -2.99368,1.15885 -1.89009,0 -2.97304,-1.13816 -1.08304,-1.14506 -1.08304,-3.14548 0,-1.82106 1.0968,-2.91094 1.0968,-1.09678 2.93167,-1.09678 z m -0.8209,2.53845 q -0.70359,0 -1.13119,0.41389 -0.43458,0.40697 -0.43458,1.06918 0,0.71738 0.40697,1.16575 0.40009,0.44837 1.1588,0.55874 z"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:medium;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         id="path9863"
+         inkscape:connector-curvature="0" />
+      <path
+         d="M -26.99245,12.06456 V 9.664065 l 5.32522,-1.29682 -5.32522,-1.303718 V 5.001033 l 5.2701,-1.29682 -5.2701,-1.303717 V 1.267492e-7 L -19.26671,2.034903 v 2.697109 l -5.31147,1.303717 5.31147,1.296819 v 2.697112 z"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:medium;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         id="path9865"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       inkscape:label="Helper Layer (don't use)"
+       clip-path="url(#patternClipPath)"
+       id="fullPattern"
+       style="display:inline">
+      <g
+         inkscape:groupmode="layer"
+         id="designBottom"
+         inkscape:label="Pattern Background"
+         transform="scale(2.56, 2.56)" />
+      <g
+         inkscape:groupmode="layer"
+         id="designTop"
+         inkscape:label="Pattern Foreground"
+         transform="scale(2.56, 2.56)">
+        <g
+           id="g2">
+          <ellipse
+             style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:3.125;stroke-linecap:round;stroke-linejoin:round"
+             id="path1"
+             cx="26.398804"
+             cy="38.489944"
+             rx="18.217163"
+             ry="21.616013" />
+          <ellipse
+             style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:3.125;stroke-linecap:round;stroke-linejoin:round"
+             id="ellipse1"
+             cx="78.681763"
+             cy="52.775864"
+             rx="13.949585"
+             ry="12.409134" />
+          <ellipse
+             style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:3.125;stroke-linecap:round;stroke-linejoin:round"
+             id="ellipse2"
+             cx="45.262817"
+             cy="92.057159"
+             rx="13.949585"
+             ry="15.906921" />
+        </g>
+      </g>
+      <g
+         id="designBottomGenerator"
+         sodipodi:insensitive="true">
+        <use
+           height="100%"
+           width="100%"
+           id="bottom1"
+           transform="translate(-256, -256)"
+           xlink:href="#designBottom"
+           y="0"
+           x="0" />
+        <use
+           height="100%"
+           width="100%"
+           id="bottom2"
+           transform="translate(0, -256)"
+           xlink:href="#designBottom"
+           y="0"
+           x="0" />
+        <use
+           height="100%"
+           width="100%"
+           id="bottom3"
+           transform="translate(256, -256)"
+           xlink:href="#designBottom"
+           y="0"
+           x="0" />
+        <use
+           height="100%"
+           width="100%"
+           id="bottom4"
+           transform="translate(-256, 0)"
+           xlink:href="#designBottom"
+           y="0"
+           x="0" />
+        <use
+           height="100%"
+           width="100%"
+           id="bottom5"
+           xlink:href="#designBottom"
+           y="0"
+           x="0" />
+        <use
+           height="100%"
+           width="100%"
+           id="bottom6"
+           transform="translate(256, 0)"
+           xlink:href="#designBottom"
+           y="0"
+           x="0" />
+        <use
+           height="100%"
+           width="100%"
+           id="bottom7"
+           transform="translate(-256, 256)"
+           xlink:href="#designBottom"
+           y="0"
+           x="0" />
+        <use
+           height="100%"
+           width="100%"
+           id="bottom8"
+           transform="translate(0, 256)"
+           xlink:href="#designBottom"
+           y="0"
+           x="0" />
+        <use
+           transform="translate(256, 256)"
+           height="100%"
+           width="100%"
+           id="bottom9"
+           xlink:href="#designBottom"
+           y="0"
+           x="0" />
+      </g>
+      <g
+         id="designTopGenerator"
+         sodipodi:insensitive="true">
+        <use
+           height="100%"
+           width="100%"
+           id="top1"
+           transform="translate(-256, -256)"
+           xlink:href="#designTop"
+           y="0"
+           x="0" />
+        <use
+           height="100%"
+           width="100%"
+           id="top2"
+           transform="translate(0, -256)"
+           xlink:href="#designTop"
+           y="0"
+           x="0" />
+        <use
+           height="100%"
+           width="100%"
+           id="top3"
+           transform="translate(256, -256)"
+           xlink:href="#designTop"
+           y="0"
+           x="0" />
+        <use
+           height="100%"
+           width="100%"
+           id="top4"
+           transform="translate(-256, 0)"
+           xlink:href="#designTop"
+           y="0"
+           x="0" />
+        <use
+           height="100%"
+           width="100%"
+           id="top5"
+           xlink:href="#designTop"
+           y="0"
+           x="0" />
+        <use
+           height="100%"
+           width="100%"
+           id="top6"
+           transform="translate(256, 0)"
+           xlink:href="#designTop"
+           y="0"
+           x="0" />
+        <use
+           height="100%"
+           width="100%"
+           id="top7"
+           transform="translate(-256, 256)"
+           xlink:href="#designTop"
+           y="0"
+           x="0" />
+        <use
+           height="100%"
+           width="100%"
+           id="top8"
+           transform="translate(0, 256)"
+           xlink:href="#designTop"
+           y="0"
+           x="0" />
+        <use
+           transform="translate(256, 256)"
+           height="100%"
+           width="100%"
+           id="top9"
+           xlink:href="#designTop"
+           y="0"
+           x="0" />
+      </g>
+    </g>
+  </g>
+  <inkscape:_templateinfo
+     id="_templateinfo10">
+    <inkscape:_name
+       id="_name12">Seamless Pattern</inkscape:_name>
+    <inkscape:_shortdesc
+       id="_shortdesc14">Seamless Pattern</inkscape:_shortdesc>
+    <inkscape:_keywords
+       id="_keywords16">Seamless Pattern</inkscape:_keywords>
+  </inkscape:_templateinfo>
+</svg>

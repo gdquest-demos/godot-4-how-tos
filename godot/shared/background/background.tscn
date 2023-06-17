@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://dnh2occ7mhnl1"]
+[gd_scene load_steps=5 format=3 uid="uid://dnh2occ7mhnl1"]
 
 [ext_resource type="Shader" path="res://shared/background/moving_background.gdshader" id="1_mx4e3"]
 [ext_resource type="Script" path="res://shared/background/background.gd" id="1_v3il2"]
-[ext_resource type="Texture2D" uid="uid://7dgd5rrwmmtc" path="res://shared/background/bone_pattern.png" id="2_rnxdw"]
 [ext_resource type="Script" path="res://shared/background/background_ratio.gd" id="3_x11la"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_r2bcx"]
@@ -13,7 +12,6 @@ shader_parameter/pattern_color = Color(0, 0.478431, 0.764706, 1)
 shader_parameter/scale = 4.0
 shader_parameter/ratio = 0.56
 shader_parameter/direction = Vector2(0, 0)
-shader_parameter/pattern_sampler = ExtResource("2_rnxdw")
 
 [node name="Background" type="CanvasLayer"]
 layer = -1
