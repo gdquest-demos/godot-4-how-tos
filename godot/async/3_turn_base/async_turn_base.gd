@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 
 const DELAY := 0.2
 const PLAYER_GROUP := "player"
