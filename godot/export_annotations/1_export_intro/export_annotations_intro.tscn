@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://byql572i76s65"]
+
+[ext_resource type="Script" path="res://export_annotations/1_export_intro/export_annotations_intro.gd" id="1_wc1ea"]
+[ext_resource type="PackedScene" uid="uid://dnh2occ7mhnl1" path="res://shared/background/background.tscn" id="2_51vdd"]
+
+[node name="ExportAnnotationsIntro" type="Node2D"]
+script = ExtResource("1_wc1ea")
+type = 1
+
+[node name="Background" parent="." instance=ExtResource("2_51vdd")]
+unique_name_in_owner = true
