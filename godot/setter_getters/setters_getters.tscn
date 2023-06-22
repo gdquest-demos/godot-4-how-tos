@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=3 uid="uid://r25jwntck5bd"]
+
+[ext_resource type="Script" path="res://setter_getters/setters_getters.gd" id="1_4de4x"]
+[ext_resource type="PackedScene" uid="uid://dnh2occ7mhnl1" path="res://shared/background/background.tscn" id="1_s51wk"]
+[ext_resource type="Shader" path="res://shared/background/moving_background.gdshader" id="2_4celf"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pqdce"]
+shader = ExtResource("2_4celf")
+shader_parameter/bg_color = Color(0.45098, 0.152941, 0.360784, 1)
+shader_parameter/pattern_color = Color(1, 0.254902, 0.490196, 1)
+shader_parameter/scale = 4.0
+shader_parameter/ratio = 0.56
+shader_parameter/direction = Vector2(0, 0)
+
+[node name="SetterGetters" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4de4x")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 36
+theme_override_font_sizes/bold_font_size = 36
+theme_override_font_sizes/italics_font_size = 36
+theme_override_font_sizes/bold_italics_font_size = 36
+theme_override_font_sizes/mono_font_size = 36
+bbcode_enabled = true
+fit_content = true
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="Background" parent="." instance=ExtResource("1_s51wk")]
+unique_name_in_owner = true
+
+[node name="Pattern" parent="Background" index="0"]
+material = SubResource("ShaderMaterial_pqdce")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+
+[editable path="Background"]
