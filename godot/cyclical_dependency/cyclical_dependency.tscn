@@ -27,7 +27,7 @@ unique_name_in_owner = true
 position = Vector2(332, 229)
 script = ExtResource("3_dcs3i")
 
-[node name="BattyLabel" type="Label" parent="Batty"]
+[node name="Label" type="Label" parent="Batty"]
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
@@ -48,8 +48,7 @@ unique_name_in_owner = true
 position = Vector2(732, 456)
 script = ExtResource("3_r1k3p")
 
-[node name="HappyBooLabel" type="Label" parent="HappyBoo"]
-unique_name_in_owner = true
+[node name="Label" type="Label" parent="HappyBoo"]
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0

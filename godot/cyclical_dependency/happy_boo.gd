@@ -7,7 +7,7 @@ const SPEED := 600.0
 
 var _batty: Batty = null
 
-@onready var label: Label = $HappyBooLabel
+@onready var label: Label = $Label
 
 
 func setup(batty: Batty) -> void:
@@ -21,5 +21,4 @@ func _physics_process(delta: float) -> void:
 	skin.idle() if direction.is_zero_approx() else skin.walk()
 
 	var batty_distance := (_batty.global_position - global_position).length()
-	# Note that %HappyBooLabel.text doesn't work!
 	label.text = TEXT % batty_distance
