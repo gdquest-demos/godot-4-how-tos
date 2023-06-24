@@ -1,10 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://dw5glbpt2cwld"]
+[gd_scene load_steps=4 format=3 uid="uid://dw5glbpt2cwld"]
 
 [ext_resource type="PackedScene" uid="uid://dor8jv8jjdcb" path="res://shared/2d_mechanics/characters/happy_boo/happy_boo_skin.tscn" id="1_7gwu8"]
 [ext_resource type="Script" path="res://shared/2d_mechanics/characters/character_2d.gd" id="1_ml5id"]
 
-[node name="HappyBoo" type="Node2D"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_o08ks"]
+radius = 30.0
+height = 90.0
+
+[node name="HappyBoo" type="CharacterBody2D"]
 script = ExtResource("1_ml5id")
 
 [node name="Skin" parent="." instance=ExtResource("1_7gwu8")]
 unique_name_in_owner = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -40)
+shape = SubResource("CapsuleShape2D_o08ks")

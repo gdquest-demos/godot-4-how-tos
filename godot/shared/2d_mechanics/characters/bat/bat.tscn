@@ -1,10 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://dc618kgehinxy"]
+[gd_scene load_steps=4 format=3 uid="uid://dc618kgehinxy"]
 
 [ext_resource type="Script" path="res://shared/2d_mechanics/characters/character_2d.gd" id="1_pqsgr"]
 [ext_resource type="PackedScene" uid="uid://bfds4go2uitlx" path="res://shared/2d_mechanics/characters/bat/bat_skin.tscn" id="2_ij1fy"]
 
-[node name="Bat" type="Node2D"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_iu451"]
+radius = 30.0
+height = 90.0
+
+[node name="Bat" type="CharacterBody2D"]
 script = ExtResource("1_pqsgr")
 
 [node name="Skin" parent="." instance=ExtResource("2_ij1fy")]
 unique_name_in_owner = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -40)
+shape = SubResource("CapsuleShape2D_iu451")

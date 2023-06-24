@@ -1,10 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://dgyyl2bt46bsb"]
+[gd_scene load_steps=4 format=3 uid="uid://dgyyl2bt46bsb"]
 
 [ext_resource type="Script" path="res://shared/2d_mechanics/characters/character_2d.gd" id="1_4byt0"]
 [ext_resource type="PackedScene" uid="uid://n4t7nalqg7yp" path="res://shared/2d_mechanics/characters/slime/slime_skin.tscn" id="2_u4h3d"]
 
-[node name="Slime" type="Node2D"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dkqpq"]
+radius = 40.0
+height = 100.0
+
+[node name="Slime" type="CharacterBody2D"]
 script = ExtResource("1_4byt0")
 
 [node name="Skin" parent="." instance=ExtResource("2_u4h3d")]
 unique_name_in_owner = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -35)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_dkqpq")
