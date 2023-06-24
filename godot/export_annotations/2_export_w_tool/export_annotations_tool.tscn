@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dhv746qc2iphf"]
+[gd_scene load_steps=3 format=3 uid="uid://dhv746qc2iphf"]
 
 [ext_resource type="Script" path="res://export_annotations/2_export_w_tool/export_annotations_tool.gd" id="1_tpa24"]
 [ext_resource type="PackedScene" uid="uid://dnh2occ7mhnl1" path="res://shared/background/background.tscn" id="2_e87gf"]
-[ext_resource type="Script" path="res://export_annotations/2_export_w_tool/background.gd" id="3_kqg3w"]
 
 [node name="ExportAnnotationsTool" type="Node2D"]
 script = ExtResource("1_tpa24")
@@ -10,4 +9,3 @@ type = 1
 
 [node name="Background" parent="." instance=ExtResource("2_e87gf")]
 unique_name_in_owner = true
-script = ExtResource("3_kqg3w")

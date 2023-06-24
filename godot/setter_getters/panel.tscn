@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://chx350cdq8f8k"]
+
+[ext_resource type="Script" path="res://setter_getters/panel.gd" id="1_ccpjj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2kgcd"]
+bg_color = Color(0.792157, 0.792157, 0.792157, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[node name="Panel" type="Panel"]
+custom_minimum_size = Vector2(160, 160)
+offset_right = 160.0
+offset_bottom = 160.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_2kgcd")
+script = ExtResource("1_ccpjj")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+offset_right = 160.0
+offset_bottom = 160.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
