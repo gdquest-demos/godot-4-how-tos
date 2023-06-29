@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=3 uid="uid://dtu7eqjiahkoe"]
+
+[ext_resource type="Script" path="res://types/inventory/item_ui.gd" id="1_5brw0"]
+
+[node name="ItemUI" type="MarginContainer"]
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+script = ExtResource("1_5brw0")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="NameLabel" type="Label" parent="HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 2
+text = "Name"
+
+[node name="StackLabel" type="Label" parent="HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Max Stack"

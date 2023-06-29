@@ -1,0 +1,12 @@
+[gd_scene load_steps=4 format=3 uid="uid://coeke45enoc04"]
+
+[ext_resource type="PackedScene" uid="uid://dc618kgehinxy" path="res://shared/2d_mechanics/characters/bat/bat.tscn" id="1_bwoxb"]
+[ext_resource type="Script" path="res://types/characters/character_2d.gd" id="2_hktux"]
+[ext_resource type="PackedScene" uid="uid://cnj5t341p20gr" path="res://types/inventory/inventory_ui.tscn" id="3_vd2dc"]
+
+[node name="Bat" instance=ExtResource("1_bwoxb")]
+script = ExtResource("2_hktux")
+items = Array[Resource("res://types/inventory/item.gd")]([])
+
+[node name="InventoryUI" parent="." index="2" instance=ExtResource("3_vd2dc")]
+unique_name_in_owner = true
