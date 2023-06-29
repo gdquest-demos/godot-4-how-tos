@@ -40,18 +40,18 @@ shader_parameter/direction = Vector2(0, 0)
 [node name="Types" type="Node2D"]
 script = ExtResource("1_ujt51")
 
-[node name="Characters" type="Node2D" parent="."]
+[node name="Bat" parent="." instance=ExtResource("2_es0xv")]
 unique_name_in_owner = true
-
-[node name="Bat" parent="Characters" instance=ExtResource("2_es0xv")]
 position = Vector2(1080, 804)
 items = Array[ExtResource("4_78iyh")]([SubResource("Resource_3g7qb")])
 
-[node name="HappyBoo" parent="Characters" instance=ExtResource("3_ldri2")]
+[node name="HappyBoo" parent="." instance=ExtResource("3_ldri2")]
+unique_name_in_owner = true
 position = Vector2(504, 404)
 items = Array[ExtResource("4_78iyh")]([SubResource("Resource_fg3yj"), SubResource("Resource_rw71c")])
 
-[node name="Slime" parent="Characters" instance=ExtResource("4_ihirx")]
+[node name="Slime" parent="." instance=ExtResource("4_ihirx")]
+unique_name_in_owner = true
 position = Vector2(1296, 396)
 items = Array[ExtResource("4_78iyh")]([SubResource("Resource_yypcf")])
 

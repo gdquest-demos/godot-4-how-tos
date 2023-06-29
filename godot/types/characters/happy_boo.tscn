@@ -9,3 +9,4 @@ script = ExtResource("2_dlto4")
 items = Array[Resource("res://types/inventory/item.gd")]([])
 
 [node name="InventoryUI" parent="." index="2" instance=ExtResource("3_1h7tr")]
+unique_name_in_owner = true

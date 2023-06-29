@@ -1,19 +1,24 @@
 extends Node2D
 
+const ItemUIScene := preload("inventory/item_ui.tscn")
+
+@onready var characters: Array[Character2D] = [%Bat, %HappyBoo, %Slime]
+
 func _ready() -> void:
-	# Can't just do:
+	# Given this scene tree:
+	# Characters (%)
+	#   - Bat
+	#   - HappyBoo
+	#   - Slime
+	#
+	# We can't just do:
 	# var character: Array[Character2D] = %Characters.get_children()
 	#
 	# Nor:
 	# # var character := %Characters.get_children() as Array[Character2D]
-	while true:
-		for character in get_characters():
-			await get_tree().create_timer(1.0).timeout
-			character.skin.hurt()
-
-
-func get_characters() -> Array[Character2D]:
-	var result: Array[Character2D] = []
-	for character in %Characters.get_children():
-		result.push_back(character)
-	return result
+	for character in characters:
+		for item in character.items:
+			var item_ui := ItemUIScene.instantiate()
+			character.inventory_ui_list.add_child(item_ui)
+			item_ui.name_label.text = item.name
+			item_ui.stack_label.text = "%d" % item.max_stack
