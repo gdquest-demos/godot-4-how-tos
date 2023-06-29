@@ -1,24 +1,20 @@
 extends Node2D
 
+const TypedCharacter2D := preload("characters/character_2d.gd")
+
 const ItemUIScene := preload("inventory/item_ui.tscn")
 
-@onready var characters: Array[Character2D] = [%Bat, %HappyBoo, %Slime]
 
 func _ready() -> void:
-	# Given this scene tree:
-	# Characters (%)
-	#   - Bat
-	#   - HappyBoo
-	#   - Slime
-	#
-	# We can't just do:
-	# var character: Array[Character2D] = %Characters.get_children()
-	#
-	# Nor:
-	# # var character := %Characters.get_children() as Array[Character2D]
+	# Because of type mismatch (Array[Node] vs Array[TypedCharacter2D]) we can't just do:
+	# var characters: Array[TypedCharacter2D] = %Characters.get_children()
+	var characters: Array[TypedCharacter2D] = []
+	characters.assign(%Characters.get_children())
+
 	for character in characters:
+		# Now we get autocomplete on character.|
 		for item in character.items:
 			var item_ui := ItemUIScene.instantiate()
 			character.inventory_ui_list.add_child(item_ui)
 			item_ui.name_label.text = item.name
-			item_ui.stack_label.text = "%d" % item.max_stack
+			item_ui.stack_label.text = "%d" % item.stack
