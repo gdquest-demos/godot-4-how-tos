@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bc2pta6pd471r"]
 
 [ext_resource type="PackedScene" uid="uid://dc618kgehinxy" path="res://shared/2d_mechanics/characters/bat/bat.tscn" id="1_6ymgj"]
-[ext_resource type="Script" path="res://async/3_turn_base/bat.gd" id="2_bdvja"]
+[ext_resource type="Script" path="res://async/3_turn_queue/bat.gd" id="2_bdvja"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_mtbnd"]
 font_size = 24

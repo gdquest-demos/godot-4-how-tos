@@ -1,10 +1,10 @@
 [gd_scene load_steps=7 format=3 uid="uid://dab35p7pc04rt"]
 
-[ext_resource type="Script" path="res://async/3_turn_base/async_turn_base.gd" id="1_irsgt"]
+[ext_resource type="Script" path="res://async/3_turn_queue/turn_queue.gd" id="1_irsgt"]
 [ext_resource type="PackedScene" uid="uid://dgyyl2bt46bsb" path="res://shared/2d_mechanics/characters/slime/slime.tscn" id="2_kt4rv"]
 [ext_resource type="PackedScene" uid="uid://dw5glbpt2cwld" path="res://shared/2d_mechanics/characters/happy_boo/happy_boo.tscn" id="2_sxptx"]
 [ext_resource type="PackedScene" uid="uid://dfnafy3v2re6k" path="res://shared/2d_mechanics/cursor_2d.tscn" id="3_00x6m"]
-[ext_resource type="PackedScene" uid="uid://bc2pta6pd471r" path="res://async/3_turn_base/bat.tscn" id="3_k3rn6"]
+[ext_resource type="PackedScene" uid="uid://bc2pta6pd471r" path="res://async/3_turn_queue/bat.tscn" id="3_k3rn6"]
 [ext_resource type="PackedScene" uid="uid://dc618kgehinxy" path="res://shared/2d_mechanics/characters/bat/bat.tscn" id="4_fgl3f"]
 
 [node name="ASyncTurnBase" type="Control"]

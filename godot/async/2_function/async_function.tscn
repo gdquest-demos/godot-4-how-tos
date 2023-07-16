@@ -16,7 +16,8 @@ shader_parameter/ratio = 0.56
 shader_parameter/direction = Vector2(0.025, 0)
 shader_parameter/pattern_sampler = ExtResource("6_enias")
 
-[node name="ASyncFunction" type="Control"]
+[node name="AsyncFunction" type="Control"]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

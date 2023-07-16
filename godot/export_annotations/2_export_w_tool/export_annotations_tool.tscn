@@ -5,7 +5,6 @@
 
 [node name="ExportAnnotationsTool" type="Node2D"]
 script = ExtResource("1_tpa24")
-type = 1
 
 [node name="Background" parent="." instance=ExtResource("2_e87gf")]
 unique_name_in_owner = true
