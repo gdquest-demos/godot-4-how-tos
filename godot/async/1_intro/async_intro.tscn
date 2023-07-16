@@ -15,7 +15,7 @@ shader_parameter/ratio = 0.56
 shader_parameter/direction = Vector2(0.025, 0)
 shader_parameter/pattern_sampler = ExtResource("3_lk34r")
 
-[node name="ASyncIntro" type="Control"]
+[node name="AsyncIntro" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -28,7 +28,7 @@ script = ExtResource("1_tx0wa")
 unique_name_in_owner = true
 position = Vector2(963, 542)
 
-[node name="ButtonHurt" type="Button" parent="."]
+[node name="Button" type="Button" parent="."]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 7
@@ -37,19 +37,21 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -133.0
-offset_top = -345.0
+offset_top = -477.0
 offset_right = 133.0
-offset_bottom = -260.0
+offset_bottom = -392.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/font_size = 56
-text = "Press Me!"
+text = "Attack Slime"
 
 [node name="Background" parent="." instance=ExtResource("1_exee4")]
 
 [node name="Pattern" parent="Background" index="0"]
 material = SubResource("ShaderMaterial_lp8p7")
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
 
-[connection signal="pressed" from="ButtonHurt" to="." method="_on_button_hurt_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 
 [editable path="Background"]

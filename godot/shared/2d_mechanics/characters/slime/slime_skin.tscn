@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://n4t7nalqg7yp"]
+[gd_scene load_steps=11 format=3 uid="uid://n4t7nalqg7yp"]
 
 [ext_resource type="Texture2D" uid="uid://dvgfmy6vtvjji" path="res://shared/2d_mechanics/characters/slime/slime_body.png" id="1_3j35h"]
 [ext_resource type="Script" path="res://shared/2d_mechanics/characters/character_skin_2d.gd" id="1_5k1pw"]
@@ -222,56 +222,6 @@ _data = {
 "walk": SubResource("Animation_l6fy2")
 }
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ssj5e"]
-animation = &"hurt"
-
-[sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_rtvnm"]
-filters = ["Anchor/SlimeBody:modulate", "Anchor/SlimeBody:texture", "Anchor:scale"]
-fadein_time = 0.05
-fadeout_time = 0.05
-
-[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_2855i"]
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_oboc6"]
-animation = &"idle"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_nyrw1"]
-animation = &"walk"
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_nsqbj"]
-advance_mode = 2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_pami4"]
-xfade_time = 0.1
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_6m35t"]
-xfade_time = 0.1
-
-[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_pb0rs"]
-states/End/position = Vector2(537, 103)
-states/Start/position = Vector2(215, 103)
-states/idle/node = SubResource("AnimationNodeAnimation_oboc6")
-states/idle/position = Vector2(330, 103)
-states/walk/node = SubResource("AnimationNodeAnimation_nyrw1")
-states/walk/position = Vector2(433, 103)
-transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_nsqbj"), "idle", "walk", SubResource("AnimationNodeStateMachineTransition_pami4"), "walk", "idle", SubResource("AnimationNodeStateMachineTransition_6m35t")]
-graph_offset = Vector2(-128, -39)
-
-[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_b1ecp"]
-graph_offset = Vector2(-248, 101)
-nodes/Animation/node = SubResource("AnimationNodeAnimation_ssj5e")
-nodes/Animation/position = Vector2(-140, 260)
-nodes/HurtShot/node = SubResource("AnimationNodeOneShot_rtvnm")
-nodes/HurtShot/position = Vector2(240, 120)
-nodes/HurtTimeScale/node = SubResource("AnimationNodeTimeScale_2855i")
-nodes/HurtTimeScale/position = Vector2(40, 260)
-nodes/StateMachine/node = SubResource("AnimationNodeStateMachine_pb0rs")
-nodes/StateMachine/position = Vector2(40, 60)
-nodes/output/position = Vector2(400, 100)
-node_connections = [&"output", 0, &"HurtShot", &"HurtShot", 0, &"StateMachine", &"HurtShot", 1, &"HurtTimeScale", &"HurtTimeScale", 0, &"Animation"]
-
-[sub_resource type="AnimationNodeStateMachinePlayback" id="AnimationNodeStateMachinePlayback_3vuqc"]
-
 [node name="SlimeSkin" type="Node2D"]
 script = ExtResource("1_5k1pw")
 
@@ -295,16 +245,7 @@ position = Vector2(0, -25)
 texture = ExtResource("2_ygydt")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
 libraries = {
 "": SubResource("AnimationLibrary_j6cum")
 }
-
-[node name="AnimationTree" type="AnimationTree" parent="."]
-unique_name_in_owner = true
-tree_root = SubResource("AnimationNodeBlendTree_b1ecp")
-anim_player = NodePath("../AnimationPlayer")
-active = true
-parameters/HurtShot/active = false
-parameters/HurtShot/request = 0
-parameters/HurtTimeScale/scale = 1.0
-parameters/StateMachine/playback = SubResource("AnimationNodeStateMachinePlayback_3vuqc")
