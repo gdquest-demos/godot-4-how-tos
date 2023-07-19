@@ -3,16 +3,12 @@ extends Control
 @onready var cursor: Sprite2D = %Cursor2D
 @onready var characters: Node2D = %Characters
 @onready var button_player_turn_done: Button = %ButtonPlayerTurnDone
-@onready var tween := create_tween()
 
 
 func _ready() -> void:
-	tween.kill()
-
 	# Turn-base style main loop
 	while true:
 		for character in characters.get_children():
-			var skin: CharacterSkin2D = character.skin
 			# Do fancy animations, attack, hurt, etc. Here we only play a "hurt" animation.
 			# When the player turn comes it waits for the player to click the "Turn Done" button.
 			await play_next_turn(character)
