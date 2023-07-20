@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://dec8x27q7adxc"]
+
+[ext_resource type="Script" path="res://static_variables/buttons.gd" id="1_tbuiu"]
+[ext_resource type="Texture2D" uid="uid://cxiwk7jedj05w" path="res://static_variables/emoji-dead.svg" id="2_e8rim"]
+[ext_resource type="Script" path="res://static_variables/texture_button.gd" id="3_asb6n"]
+[ext_resource type="Texture2D" uid="uid://ck6joqxk117ow" path="res://static_variables/emoji-sad.svg" id="4_hiu0d"]
+
+[node name="Buttons" type="HBoxContainer"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -880.0
+offset_top = -900.0
+offset_right = 880.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.05, 0.05)
+pivot_offset = Vector2(960, 800)
+theme_override_constants/separation = 320
+script = ExtResource("1_tbuiu")
+
+[node name="Delete" type="TextureButton" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+texture_normal = ExtResource("2_e8rim")
+script = ExtResource("3_asb6n")
+
+[node name="Hurt" type="TextureButton" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+texture_normal = ExtResource("4_hiu0d")
+script = ExtResource("3_asb6n")
