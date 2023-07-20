@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://dor8jv8jjdcb"]
+[gd_scene load_steps=15 format=3 uid="uid://dor8jv8jjdcb"]
 
 [ext_resource type="Script" path="res://shared/2d_mechanics/characters/character_skin_2d.gd" id="1_jr365"]
 [ext_resource type="Texture2D" uid="uid://cuh5d64bqf4op" path="res://shared/2d_mechanics/ground_shadow.png" id="2_i8e11"]
@@ -406,54 +406,6 @@ _data = {
 "walk": SubResource("Animation_74kqe")
 }
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_kqmes"]
-animation = &"hurt"
-
-[sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_dhxkq"]
-filters = ["Anchor/Body:modulate", "Anchor/Body:scale", "Anchor/Face/SlimeFace:texture", "Anchor/Face:position:y", "Anchor/SlimeBody:modulate", "Anchor/SlimeBody:texture", "Anchor:scale"]
-fadein_time = 0.05
-fadeout_time = 0.05
-
-[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_tx2jv"]
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_56v46"]
-animation = &"idle"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_i5043"]
-animation = &"walk"
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_nsqbj"]
-advance_mode = 2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_m68ei"]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_crsjv"]
-
-[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_swdv2"]
-states/End/position = Vector2(537, 103)
-states/Start/position = Vector2(215, 103)
-states/idle/node = SubResource("AnimationNodeAnimation_56v46")
-states/idle/position = Vector2(331, 103)
-states/walk/node = SubResource("AnimationNodeAnimation_i5043")
-states/walk/position = Vector2(432, 103)
-transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_nsqbj"), "idle", "walk", SubResource("AnimationNodeStateMachineTransition_m68ei"), "walk", "idle", SubResource("AnimationNodeStateMachineTransition_crsjv")]
-graph_offset = Vector2(-128, -39)
-
-[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_1dhgo"]
-graph_offset = Vector2(-317, 52)
-nodes/Animation/node = SubResource("AnimationNodeAnimation_kqmes")
-nodes/Animation/position = Vector2(-100, 240)
-nodes/HurtShot/node = SubResource("AnimationNodeOneShot_dhxkq")
-nodes/HurtShot/position = Vector2(220, 120)
-nodes/HurtTimeScale/node = SubResource("AnimationNodeTimeScale_tx2jv")
-nodes/HurtTimeScale/position = Vector2(40, 240)
-nodes/StateMachine/node = SubResource("AnimationNodeStateMachine_swdv2")
-nodes/StateMachine/position = Vector2(-120, 100)
-nodes/output/position = Vector2(400, 100)
-node_connections = [&"output", 0, &"HurtShot", &"HurtShot", 0, &"StateMachine", &"HurtShot", 1, &"HurtTimeScale", &"HurtTimeScale", 0, &"Animation"]
-
-[sub_resource type="AnimationNodeStateMachinePlayback" id="AnimationNodeStateMachinePlayback_bg6qo"]
-
 [node name="HappyBooSkin" type="Node2D"]
 script = ExtResource("1_jr365")
 
@@ -468,50 +420,50 @@ texture = ExtResource("2_i8e11")
 modulate = Color(1, 0.572549, 0.176471, 1)
 
 [node name="SquareFootL" type="Sprite2D" parent="Remote"]
-position = Vector2(-22.8281, -3.03689)
+position = Vector2(-16.1683, -2.75227)
 rotation = -0.436332
 scale = Vector2(0.999705, 0.999705)
 texture = ExtResource("3_a7vmk")
 offset = Vector2(-4, 0)
 
 [node name="SquareLowerLegL" type="Sprite2D" parent="Remote"]
-position = Vector2(-17.7017, -13.8829)
-rotation = 0.441534
+position = Vector2(-12.2558, -14.0928)
+rotation = 0.332219
 scale = Vector2(0.999705, 0.999705)
 texture = ExtResource("4_t7lsq")
 offset = Vector2(0, 6)
 
 [node name="SquareUpperLegL" type="Sprite2D" parent="Remote"]
-position = Vector2(-11.7209, -26.5365)
-rotation = 0.441534
+position = Vector2(-7.69114, -27.3234)
+rotation = 0.332219
 scale = Vector2(0.999705, 0.999705)
 texture = ExtResource("5_ij624")
 offset = Vector2(0, 6)
 
 [node name="SquareFootR" type="Sprite2D" parent="Remote"]
-position = Vector2(21.4101, -3.32614)
+position = Vector2(27.7743, -7.86608)
 rotation = -2.70526
 scale = Vector2(0.999708, 0.999708)
 texture = ExtResource("3_a7vmk")
 offset = Vector2(-4, 0)
 
 [node name="SquareLowerLegR" type="Sprite2D" parent="Remote"]
-position = Vector2(15.3409, -13.6741)
-rotation = -0.530441
+position = Vector2(20.6124, -17.4902)
+rotation = -0.639756
 scale = Vector2(0.999708, 0.999708)
 texture = ExtResource("4_t7lsq")
 offset = Vector2(0, 6)
 
 [node name="SquareUpperLegR" type="Sprite2D" parent="Remote"]
-position = Vector2(8.26021, -25.7468)
-rotation = -0.530441
+position = Vector2(12.2568, -28.7183)
+rotation = -0.639756
 scale = Vector2(0.999708, 0.999708)
 texture = ExtResource("5_ij624")
 offset = Vector2(0, 6)
 
 [node name="SquareBody" type="Sprite2D" parent="Remote"]
-position = Vector2(-1.41447, -34.1341)
-rotation = 0.0395019
+position = Vector2(1.72489, -36)
+rotation = -0.0698132
 scale = Vector2(0.999835, 0.999835)
 texture = ExtResource("6_am3wu")
 offset = Vector2(0, -23)
@@ -524,8 +476,8 @@ texture = ExtResource("7_nma1n")
 modification_stack = ExtResource("8_eox6w")
 
 [node name="Center" type="Bone2D" parent="Skeleton2D"]
-position = Vector2(-1.41447, -34.1341)
-rotation = 0.0395019
+position = Vector2(1.72489, -36)
+rotation = -0.0698132
 scale = Vector2(0.999835, 0.999835)
 rest = Transform2D(1, 0, 0, 1, 0, -37)
 
@@ -589,7 +541,7 @@ remote_path = NodePath("../../../../Remote/SquareUpperLegR")
 remote_path = NodePath("../../../Remote/SquareBody")
 
 [node name="FootLIK" type="Bone2D" parent="Skeleton2D"]
-position = Vector2(-14, -3)
+position = Vector2(-20, -9)
 rotation = -0.436332
 scale = Vector2(0.999987, 0.999987)
 rest = Transform2D(1, 0, 0, 1, -14, -3)
@@ -604,7 +556,7 @@ update_position = false
 update_scale = false
 
 [node name="FootRIK" type="Bone2D" parent="Skeleton2D"]
-position = Vector2(14, -3)
+position = Vector2(6, -3)
 rotation = 0.436332
 scale = Vector2(0.999989, 0.999989)
 rest = Transform2D(1, 0, 0, 1, 14, -3)
@@ -623,13 +575,3 @@ update_scale = false
 libraries = {
 "": SubResource("AnimationLibrary_wrcpu")
 }
-
-[node name="AnimationTree" type="AnimationTree" parent="."]
-unique_name_in_owner = true
-tree_root = SubResource("AnimationNodeBlendTree_1dhgo")
-anim_player = NodePath("../AnimationPlayer")
-active = true
-parameters/HurtShot/active = false
-parameters/HurtShot/request = 0
-parameters/HurtTimeScale/scale = 1.0
-parameters/StateMachine/playback = SubResource("AnimationNodeStateMachinePlayback_bg6qo")

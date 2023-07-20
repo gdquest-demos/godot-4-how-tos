@@ -18,7 +18,10 @@ func _physics_process(delta: float) -> void:
 	var direction := Input.get_vector("move_left", "move_right", "move_forward", "move_back")
 	velocity = direction * SPEED
 	move_and_slide()
-	skin.idle() if direction.is_zero_approx() else skin.walk()
+	if direction.is_zero_approx():
+		skin.idle()
+	else:
+		skin.walk()
 
 	var batty_distance := (_batty.global_position - global_position).length()
 	label.text = TEXT % batty_distance
