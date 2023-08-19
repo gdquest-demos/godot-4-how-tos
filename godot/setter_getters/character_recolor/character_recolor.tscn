@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bp3frqo3lobeu"]
+
+[ext_resource type="Script" path="res://setter_getters/character_recolor/character_recolor.gd" id="1_tcj2m"]
+
+[node name="CharacterRecolor" type="Node"]
+script = ExtResource("1_tcj2m")

@@ -1,0 +1,67 @@
+[gd_scene load_steps=9 format=3 uid="uid://bkownh0mc2e4v"]
+
+[ext_resource type="Script" path="res://setter_getters/health_bar/health_bar_character.gd" id="1_kj2x1"]
+[ext_resource type="PackedScene" uid="uid://dor8jv8jjdcb" path="res://shared/2d_mechanics/characters/happy_boo/happy_boo_skin.tscn" id="2_xw46k"]
+[ext_resource type="PackedScene" uid="uid://dnh2occ7mhnl1" path="res://shared/background/background.tscn" id="3_ftftj"]
+[ext_resource type="Shader" path="res://shared/background/moving_background.gdshader" id="4_rigvl"]
+[ext_resource type="Texture2D" uid="uid://7dgd5rrwmmtc" path="res://shared/background/bone_pattern.png" id="5_xrmwl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7y8m6"]
+bg_color = Color(0.152941, 0.168627, 0.188235, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jhlfm"]
+bg_color = Color(0.623529, 0.866667, 0.317647, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0pxiy"]
+shader = ExtResource("4_rigvl")
+shader_parameter/bg_color = Color(0.0235294, 0.113725, 0.329412, 1)
+shader_parameter/pattern_color = Color(0.423529, 0.172549, 0.854902, 1)
+shader_parameter/scale = 4.0
+shader_parameter/ratio = 0.56
+shader_parameter/direction = Vector2(0.025, 0)
+shader_parameter/pattern_sampler = ExtResource("5_xrmwl")
+
+[node name="HealthBarCharacter" type="Node2D"]
+position = Vector2(959, 611)
+script = ExtResource("1_kj2x1")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -158.0
+offset_top = -234.0
+offset_right = -118.0
+offset_bottom = -194.0
+
+[node name="ProgressBar" type="ProgressBar" parent="Control"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_top = -0.5
+anchor_bottom = 0.125
+offset_right = 328.0
+offset_bottom = 27.0
+theme_override_styles/background = SubResource("StyleBoxFlat_7y8m6")
+theme_override_styles/fill = SubResource("StyleBoxFlat_jhlfm")
+value = 100.0
+show_percentage = false
+metadata/_edit_use_anchors_ = true
+
+[node name="HappyBooSkin" parent="." instance=ExtResource("2_xw46k")]
+unique_name_in_owner = true
+scale = Vector2(1.6, 1.6)
+
+[node name="Background" parent="." instance=ExtResource("3_ftftj")]
+
+[node name="Pattern" parent="Background" index="0"]
+material = SubResource("ShaderMaterial_0pxiy")
+
+[editable path="Background"]
