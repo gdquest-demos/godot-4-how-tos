@@ -6,6 +6,15 @@
 [ext_resource type="Shader" path="res://shared/background/moving_background.gdshader" id="4_rigvl"]
 [ext_resource type="Texture2D" uid="uid://buydr7yqfdtjo" path="res://shared/background/group_pattern.png" id="5_h70rm"]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0pxiy"]
+shader = ExtResource("4_rigvl")
+shader_parameter/bg_color = Color(0.0235294, 0.113725, 0.329412, 1)
+shader_parameter/pattern_color = Color(0.423529, 0.172549, 0.854902, 1)
+shader_parameter/scale = 4.0
+shader_parameter/ratio = 0.56
+shader_parameter/direction = Vector2(0.025, 0)
+shader_parameter/pattern_sampler = ExtResource("5_h70rm")
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7y8m6"]
 bg_color = Color(0.152941, 0.168627, 0.188235, 1)
 corner_radius_top_left = 8
@@ -20,22 +29,22 @@ corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_0pxiy"]
-shader = ExtResource("4_rigvl")
-shader_parameter/bg_color = Color(0.0235294, 0.113725, 0.329412, 1)
-shader_parameter/pattern_color = Color(0.423529, 0.172549, 0.854902, 1)
-shader_parameter/scale = 4.0
-shader_parameter/ratio = 0.56
-shader_parameter/direction = Vector2(0.025, 0)
-shader_parameter/pattern_sampler = ExtResource("5_h70rm")
-
 [node name="HealthBarCharacter" type="Node2D"]
 position = Vector2(959, 611)
 script = ExtResource("1_kj2x1")
 
-[node name="Node" type="Node" parent="."]
+[node name="Background" parent="." instance=ExtResource("3_ftftj")]
 
-[node name="Control" type="Control" parent="Node"]
+[node name="Pattern" parent="Background" index="0"]
+material = SubResource("ShaderMaterial_0pxiy")
+mouse_filter = 2
+metadata/_edit_lock_ = true
+
+[node name="HappyBooSkin" parent="." instance=ExtResource("2_xw46k")]
+unique_name_in_owner = true
+scale = Vector2(1.6, 1.6)
+
+[node name="Control" type="Control" parent="HappyBooSkin"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -44,7 +53,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="ProgressBar" type="ProgressBar" parent="Node/Control"]
+[node name="ProgressBar" type="ProgressBar" parent="HappyBooSkin/Control"]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 8
@@ -63,7 +72,7 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_jhlfm")
 value = 100.0
 show_percentage = false
 
-[node name="Label" type="Label" parent="Node/Control"]
+[node name="Label" type="Label" parent="HappyBooSkin/Control"]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 8
@@ -72,23 +81,13 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -174.5
-offset_top = 133.0
+offset_top = 26.25
 offset_right = 174.5
-offset_bottom = 203.0
+offset_bottom = 96.25
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 48
+theme_override_font_sizes/font_size = 44
 text = "Health: 100"
 horizontal_alignment = 1
-
-[node name="HappyBooSkin" parent="." instance=ExtResource("2_xw46k")]
-unique_name_in_owner = true
-scale = Vector2(1.6, 1.6)
-
-[node name="Background" parent="." instance=ExtResource("3_ftftj")]
-
-[node name="Pattern" parent="Background" index="0"]
-material = SubResource("ShaderMaterial_0pxiy")
-mouse_filter = 2
 
 [editable path="Background"]

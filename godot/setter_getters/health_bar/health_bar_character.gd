@@ -1,11 +1,8 @@
 extends Node2D
 
 
-var max_health := 100:
-	set = set_max_health
-var health := max_health:
-	set = set_health,
-	get = get_health
+var max_health := 100: set = set_max_health
+var health := max_health: set = set_health, get = get_health
 
 
 func set_max_health(new_value: int) -> void:
@@ -39,6 +36,7 @@ func _ready():
 			%HappyBooSkin.idle()
 	)
 	%ProgressBar.value = health
+
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("click_primary"):
