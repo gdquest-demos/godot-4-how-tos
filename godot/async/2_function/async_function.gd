@@ -1,4 +1,4 @@
-1extends Control
+extends Control
 
 var button_group := ButtonGroup.new()
 

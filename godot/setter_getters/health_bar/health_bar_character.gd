@@ -20,8 +20,12 @@ func set_health(new_health: int) -> void:
 		%HappyBooSkin.hurt()
 	
 	health = clamp(new_health, 0, max_health)
-	var tween := create_tween()
+	var tween := create_tween().set_parallel()
 	tween.tween_property(%ProgressBar, "value", new_health, 0.6)
+	tween.tween_method(
+		func(value): %Label.text = "Health: " + str(round(value)),
+		%ProgressBar.value, new_health, 0.6
+	)
 
 
 func get_health() -> int:
