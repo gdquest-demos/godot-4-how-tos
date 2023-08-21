@@ -2,24 +2,28 @@ extends Character2D
 
 signal count_updated
 
+# These two variables are attached to the class (the script resource).
+# They are shared between all instances.
 static var delete_count := 0
 static var hurt_count := 0
 
 
 func _ready() -> void:
-	%Buttons.delete.gui_input.connect(callback.bind(delete))
-	%Buttons.hurt.gui_input.connect(callback.bind(hurt))
-
-
-func callback(event: InputEvent, action: Callable) -> void:
+	%Buttons.delete.gui_input.connect(func(event: InputEvent):
 		if event.is_action_pressed("click_primary"):
-			action.call()
+			delete()
+	)
+	%Buttons.hurt.gui_input.connect(func(event: InputEvent):
+		if event.is_action_pressed("click_primary"):
+			hurt()
+	)
 
 
 func delete() -> void:
 	delete_count += 1
 	queue_free()
 	count_updated.emit()
+
 
 func hurt() -> void:
 	skin.hurt()

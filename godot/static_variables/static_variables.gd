@@ -1,6 +1,6 @@
 extends Control
 
-const Character := preload("character_2d.gd")
+const Mob := preload("static_variables_mob.gd")
 
 
 func _ready() -> void:
@@ -9,5 +9,5 @@ func _ready() -> void:
 
 
 func _on_enemy_count_updated() -> void:
-	%DeleteCount.label_value.text = str(Character.delete_count)
-	%HurtCount.label_value.text = str(Character.hurt_count)
+	%DeleteCount.label_value.text = str(Mob.delete_count)
+	%HurtCount.label_value.text = str(Mob.hurt_count)

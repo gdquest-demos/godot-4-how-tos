@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://d10vx5f43luj7"]
 
 [ext_resource type="PackedScene" uid="uid://dgyyl2bt46bsb" path="res://shared/2d_mechanics/characters/slime/slime.tscn" id="1_ae06e"]
-[ext_resource type="Script" path="res://static_variables/character_2d.gd" id="2_kll35"]
+[ext_resource type="Script" path="res://static_variables/static_variables_mob.gd" id="2_kll35"]
 [ext_resource type="PackedScene" uid="uid://dec8x27q7adxc" path="res://static_variables/buttons.tscn" id="2_uxwxr"]
 
 [node name="Slime" instance=ExtResource("1_ae06e")]
@@ -12,5 +12,9 @@ autoplay = "idle"
 
 [node name="Buttons" parent="." index="2" instance=ExtResource("2_uxwxr")]
 unique_name_in_owner = true
+offset_left = -58.0
+offset_top = -152.0
+offset_right = 58.0
+offset_bottom = -96.0
 
 [editable path="Skin"]

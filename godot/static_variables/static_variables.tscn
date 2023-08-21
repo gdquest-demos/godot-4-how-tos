@@ -25,43 +25,61 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_yg8rq")
 
+[node name="Background" parent="." instance=ExtResource("5_et0mu")]
+
+[node name="Pattern" parent="Background" index="0"]
+material = SubResource("ShaderMaterial_77joe")
+
 [node name="PanelContainer" type="PanelContainer" parent="."]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 0
-offset_left = 16.0
-offset_top = 16.0
-offset_right = 216.0
-offset_bottom = 131.0
+offset_left = 32.0
+offset_top = 32.0
+offset_right = 303.0
+offset_bottom = 237.0
 
 [node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
 layout_mode = 2
-theme_override_constants/margin_left = 16
-theme_override_constants/margin_top = 16
-theme_override_constants/margin_right = 16
-theme_override_constants/margin_bottom = 16
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer"]
 layout_mode = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_font_sizes/bold_font_size = 38
 bbcode_enabled = true
 text = "[b]Enemies[/b]"
 fit_content = true
+
+[node name="HSeparator" type="HSeparator" parent="PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 16
 
 [node name="DeleteCount" parent="PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("1_m6aqv")]
 unique_name_in_owner = true
 layout_mode = 2
 
 [node name="LabelName" parent="PanelContainer/MarginContainer/VBoxContainer/DeleteCount" index="0"]
+theme_override_font_sizes/font_size = 32
 text = "Delete Count:"
+
+[node name="LabelValue" parent="PanelContainer/MarginContainer/VBoxContainer/DeleteCount" index="1"]
+theme_override_font_sizes/font_size = 32
 
 [node name="HurtCount" parent="PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("1_m6aqv")]
 unique_name_in_owner = true
 layout_mode = 2
 
 [node name="LabelName" parent="PanelContainer/MarginContainer/VBoxContainer/HurtCount" index="0"]
+theme_override_font_sizes/font_size = 32
 text = "Hurt Count:"
+
+[node name="LabelValue" parent="PanelContainer/MarginContainer/VBoxContainer/HurtCount" index="1"]
+theme_override_font_sizes/font_size = 32
 
 [node name="Enemies" type="Node2D" parent="."]
 unique_name_in_owner = true
@@ -87,11 +105,6 @@ position = Vector2(1177, 861)
 [node name="Slime4" parent="Enemies" instance=ExtResource("4_vdfi6")]
 position = Vector2(1578, 730)
 
-[node name="Background" parent="." instance=ExtResource("5_et0mu")]
-
-[node name="Pattern" parent="Background" index="0"]
-material = SubResource("ShaderMaterial_77joe")
-
+[editable path="Background"]
 [editable path="PanelContainer/MarginContainer/VBoxContainer/DeleteCount"]
 [editable path="PanelContainer/MarginContainer/VBoxContainer/HurtCount"]
-[editable path="Background"]
